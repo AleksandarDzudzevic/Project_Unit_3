@@ -34,3 +34,10 @@ When code was researched in the web, proper citation is used to give credit to t
 6. csv.file data storing and reading
 
 # Criterion D: Functionality 
+### Format
+A video demonstrating the testing for the success criteria.
+
+Max. length 4 min
+### Extensibility
+The last 30s of the video should include a discussion of how the code is well organized so that future developers can extend it
+
