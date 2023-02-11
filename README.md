@@ -26,5 +26,11 @@ This refers to the software tools used during the development of the solution, a
 ### Sources
 When code was researched in the web, proper citation is used to give credit to the original author.
 ### Tools used:
-<wdde>
+1. OOP paradigm
+2. KivyMD Library
+3. Relational databases
+4. SQLite, ORM
+5. Hashing
+6. csv.file data storing and reading
+
 # Criterion D: Functionality 
