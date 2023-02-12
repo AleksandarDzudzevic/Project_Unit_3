@@ -3,6 +3,9 @@
 
 # Criterion A: Planning 
 ### Definition of the Problem
+UWC ISAK Japan is a school that always strives to be more environmentally friendly, but due to high demand for copies of ISAK INSIDER articles every week, a lot of paper is being used to print them. This especially bothered Jonathan Wang Ye, who is considered by many, number one environmentalist at ISAK, porbably even Japan. He is in urgent need for an UWC ISAK journalism club application which would store articles that ISAK INSIDER publishes every week in addition to storing articles from past weeks. Additional benefit of this would be that would be available and ready to be read anywhere in the world, allowing fans and alumni of the school outside ISAK to enjoy it.
+This way everyone would be able to enjoy ISAK INSIDER without hurting the environment and wasting paper in the process.
+
 Consider the following key questions 
 Who is the client?
 Why is the product being developed
