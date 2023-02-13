@@ -10,17 +10,21 @@ Who is the client?
 Why is the product being developed
 
 ### Success criteria
-#### 1. Option to create an account with a signup and login feature that validates password and username not allowing the same username.
-#### 2. Users' passwords are securly stored. 
-#### 3. 
-#### 4.Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.
-#### 5. Option to view articles from past weeks by choosing the date.
-#### 6. Option to choose which type of article you want to read (sport, culture, Karuizawa community, global issues…)
+ 1. Option to create an account with a signup and login feature that validates password and username, not allowing identical usernames.
+ 2. Users' passwords are securly stored. 
+ 3. 
+ 4.Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.
+Reader functions::
+editor functions
+ 5. Option to view articles from past weeks by choosing the date.
+ 6. Option to choose which type of article you want to read (sport, culture, Karuizawa community, global issues…)
 
 
 
 ### Design statement???
+
 ---
+
 ### Rationale for proposed solution
 For this project the application will have login/signup system in order to distinguish journalism club editor accounts which would have the feature to add articles, so login in system is needed to allow this. And it will be a user friendly application in order for clients to use it without instruction needed, anywhere in the world. The application will also allow client to choose articles from previous weeks, which is a huge upgrade compared to previous hardcopy articles model. All of the content just one click away, anywhere in the world.
 
