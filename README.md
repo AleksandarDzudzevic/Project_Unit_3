@@ -10,9 +10,9 @@ Who is the client?
 Why is the product being developed
 
 ### Success criteria
-#### 1. Option to create an account with a signup and login feature that validates password and username not allowing the same username twice.
-#### 2. Secure password storing in the database, using hashing encryption
-#### 3. Allow different accounts to access the same database that stores articles.
+#### 1. Option to create an account with a signup and login feature that validates password and username not allowing the same username.
+#### 2. Users' passwords are securly stored. 
+#### 3. 
 #### 4.Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.
 #### 5. Option to view articles from past weeks by choosing the date.
 #### 6. Option to choose which type of article you want to read (sport, culture, Karuizawa community, global issues…)
