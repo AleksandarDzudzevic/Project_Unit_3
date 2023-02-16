@@ -12,7 +12,7 @@ Why is the product being developed
 ### Success criteria
  1. Option to create an account with a signup and login feature that validates password and username, not allowing identical usernames.
  2. Users' passwords are securly stored. 
- 3. 
+ 3. There is an optional password recovery option, allowing user to login by answering safety question they inputed when creating a password.
  4.Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.
 Reader functions::
 editor functions
