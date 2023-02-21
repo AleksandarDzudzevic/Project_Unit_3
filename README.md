@@ -10,14 +10,14 @@ Who is the client?
 Why is the product being developed
 
 ### Success criteria
- 1. Option to create an account with a signup and login feature that validates password and username, not allowing identical usernames.
+ 1. Option to create an account with a signup and login feature that allows usage of the application by validating password and username, not allowing identical usernames.
  2. Users' passwords are securly stored. 
- 3. There is an optional password recovery option, allowing user to login by answering safety question they inputed when creating a password.
+ 3. There is a secondary account access option, allowing user to login by answering safety question they inputed when creating a password.
  4.Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.
 Reader functions::
 editor functions
- 5. Option to view articles from past weeks by choosing the date.
- 6. Option to choose which type of article you want to read (sport, culture, Karuizawa community, global issues…)
+ 5. Option to view past articles containing the author, title and its content.
+ 6. Option to choose the edition of newspapers the user wants to view, with articles grouped by the dates.
 
 
 
