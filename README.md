@@ -20,7 +20,7 @@ Why is the product being developed
 
 
 ### Design statement
-I will design an aplication for Jonathan Ye, UWC ISAK student. This will be a journalism club application and will serve to display Isak insider articles in digital format. It will be a desktop application.
+I will design an aplication for Jonathan Wang Ye, UWC ISAK student. This will be a journalism club application and will serve to display Isak insider articles in digital format. It will be a desktop application, and will be developed in the one month period.
 
 ---
 
