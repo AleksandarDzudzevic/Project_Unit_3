@@ -54,7 +54,7 @@ Table 1:
 | 1  | First meeting with client                             | To understand client problem and requirements                                              | Planning       | 10 minutes    | 10.2.2023           | A        |
 | 2  | Write down success criteria                           | To list down the first success criteria                                                    | Planning       | 20 minutes    | 12.2.2023           | A        |
 | 3  | Write problem definition                              | Have problem definition which will identify who client is and the product that client want | Planning       | 20 minutes        | 12.2.2023           | A        |
-| 4 | Research and write rationale for proposed solution    | Finish rationale for proposed solution                                                     | Planning       | 2 hours       | 20 March          | A        |
+| 4 | Research and write rationale for proposed solution    | Finish rationale for proposed solution                                                     | Planning       | 2 hours       | 12.2.2023          | A        |
 | 5  | Update success criteria                               | List more success criteria and prepare for presentation to client                          | Planning       | 15 minutes    | 13.2.2023         | A        |
 | 6  | Starts working on login and registration system       | Finish login and registration system with database                                         | Development    | 2 hours        | 14.2.2023         | C        |
 | 7 | Working on password encryption                        | Using sha256 to encrypt password and check password in login and registration              | Development    |15 minutes| 14.2.2023          | C        |
