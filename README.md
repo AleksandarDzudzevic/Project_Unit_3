@@ -20,7 +20,7 @@ Why is the product being developed
 
 
 ### Design statement
-In order to satisfy client's needs, I will develop a journalism club application that will serve as a place where users could read ISAK Insider articles. The application will be developed using Python programming language and the Kivy MD library for the user interface design. The data for the journalism club applicaation will be stored using SQL. SQL is perfect for handling large quantity of data, such as weekly newspapers articles .Using SQL to store those will allow smooth operation and accurate data accessing as SQL has many features that allow access to a specific type of data needed, depending on the parameters entered, and all that is done very efficiently.
+I will design an aplication for Jonathan Ye, UWC ISAK student. This will be a journalism club application and will serve to display Isak insider articles in digital format. It will be a desktop application.
 
 ---
 
