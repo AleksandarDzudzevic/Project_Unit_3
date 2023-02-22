@@ -12,9 +12,9 @@ Why is the product being developed
 ### Success criteria
  1. Option to create an account with a signup and login feature that allows usage of the application by validating password and username, not allowing identical usernames.
  2. Users' passwords are securly stored. 
- 3. There is a secondary account access option, allowing user to login by answering safety question they inputed when creating a password.
- 4. Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member. Viewers can only read. Editors have a feature of adding articles.
- 5. Option to view past articles containing the author, title and its content.
+ 3. Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member. Viewers can only read. Editors have a feature of adding articles.
+ 4. Option to add a picture inside of the article, allowing full expirience of digital newspapers.
+ 5. Option to view past articles containing the author, title, date, picture and its content.
  6. Option to choose the edition of newspapers the user wants to view, with articles grouped by the dates.
 
 
