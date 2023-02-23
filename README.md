@@ -16,6 +16,7 @@ Why is the product being developed
  4. Option to add a picture inside of the article, allowing full expirience of digital newspapers.
  5. Option to view past articles containing the author, title, date, picture and its content.
  6. Option to choose the edition of newspapers the user wants to view, with articles grouped by the dates.
+ 7. Option to sign out and delete an account 
 
 
 
@@ -59,12 +60,13 @@ Table 1:
 | 6  | Starts working on login and registration system       | Finish login and registration system with database                                           | 2 hours        | 14.2.2023         | C        |
 | 7 | Working on password encryption                        | Using sha256 to encrypt password and check password in login and registration              | 15 minutes| 14.2.2023          | C        |
 | 8| Meet with client to  present the success criteria     | Present success criteria to client to get the approval                                     |  30 minutes    | 21.2.2023         | A        |
-| 9  | Create wireframe diagram                              | Wireframe diagram is ready to present to client as the first MVP                             | 40 minutes   | 22.2.2023          | B        |
-| 10  | Create system diagram                                 | System diagram is done with details written on it                                           |  45 minutes       | 22.2.2023         | B        |
-| 11 | Create welcome screen following the wireframe diagram | Have welcome screen ready                                                                    | 2 hours       | 22/23.2.2023           | C        |
+| 9  | Create wireframe diagram                              | Wireframe diagram is ready to present to client as the first MVP                             | 40 minutes   | 24.2.2023          | B        |
+| 10  | Create system diagram                                 | System diagram is done with details written on it                                           |  45 minutes       | 24.2.2023         | B        |
+| 11 | Create welcome screen following the wireframe diagram | Have welcome screen ready                                                                    | 1 hour 30 minutes      | 24.2.2023           | C        |
 |12| Create flow diagrams for parts of the code|Have finished 3 flow diagrams| 45 minutes| 23.2.2023|B|
-| 13 | Present the wireframe and application to the client   | Get client's feedback on the wireframe and application| 10 minutes    |???          | A        |
-| 14 | Make ER diagram                                       | ER diagram is created for both tables                                                          | 30 minutes    | ???      | B        |
+|13| Add email validation and editor mode validation| Allow only email with @ sign and give editor access to users with @isakinsider.jp email ending|35 minutes| 24.2.2023|C|
+| 14 | Present the wireframe and application to the client   | Get client's feedback on the wireframe and application| 10 minutes    |???          | A        |
+| 15 | Make ER diagram                                       | ER diagram is created for both tables                                                          | 30 minutes    | ???      | B        |
 
 Table 2:
 > Record of Task-:shows the planning and working process throughout the project. This includes: programming, documentation, client's meetings, and other  process from the start of the project to the due date. Table contains order, description, Planned Outcome, Design Cycle, Time Estimate, Target Completion, Criteria
