@@ -62,8 +62,9 @@ Table 1:
 | 9  | Create wireframe diagram                              | Wireframe diagram is ready to present to client as the first MVP                             | 40 minutes   | 22.2.2023          | B        |
 | 10  | Create system diagram                                 | System diagram is done with details written on it                                           |  45 minutes       | 22.2.2023         | B        |
 | 11 | Create welcome screen following the wireframe diagram | Have welcome screen ready                                                                    | 2 hours       | 22/23.2.2023           | C        |
-| 12 | Present the wireframe and application to the client   | Get client's feedback on the wireframe and application                                         | 10 minutes    |???          | A        |
-| 13 | Make ER diagram                                       | ER diagram is created for both tables                                                          | 30 minutes    | ???      | B        |
+|12| Create flow diagrams for parts of the code|Have finished 3 flow diagrams| 45 minutes| 23.2.2023|B|
+| 13 | Present the wireframe and application to the client   | Get client's feedback on the wireframe and application| 10 minutes    |???          | A        |
+| 14 | Make ER diagram                                       | ER diagram is created for both tables                                                          | 30 minutes    | ???      | B        |
 
 Table 2:
 > Record of Task-:shows the planning and working process throughout the project. This includes: programming, documentation, client's meetings, and other  process from the start of the project to the due date. Table contains order, description, Planned Outcome, Design Cycle, Time Estimate, Target Completion, Criteria
