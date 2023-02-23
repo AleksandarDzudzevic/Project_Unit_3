@@ -50,7 +50,7 @@ Table 1:
 ### Record of tasks
 
 |    | Planned Action                                        | Planned Outcome                                                                            | Time Estimate | Target Completion | Criteria |
-|----|-------------------------------------------------------|--------------------------------------------------------------------------------------------|----------------|---------------|-------------------|----------|
+|----|--------------------------------------------------------------------------------------------|----------------|---------------|-------------------|----------|
 | 1  | First meeting with client                             | To understand client problem and requirements                                              | 10 minutes    | 10.2.2023           | A        |
 | 2  | Write down success criteria                           | To list down the first success criteria                                                    | 20 minutes    | 12.2.2023           | A        |
 | 3  | Write problem definition                              | Have problem definition which will identify who client is and the product that client want | 20 minutes        | 12.2.2023           | A        |
