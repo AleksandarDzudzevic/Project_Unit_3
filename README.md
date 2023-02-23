@@ -49,21 +49,21 @@ Table 1:
 >Shows the test plan containing information about testing done for this application. There are 3 different types of tests presented in the test plan which are unit test(to test one part of the program), integration test(to test the cooperation of different parts) and code review(to check the quality of code). Table shows description, steps to follow, and expected output with a goal to help user understand the process better.
 ### Record of tasks
 
-|    | Planned Action                                        | Planned Outcome                                                                            | Design Cycle   | Time Estimate | Target Completion | Criteria |
+|    | Planned Action                                        | Planned Outcome                                                                            | Time Estimate | Target Completion | Criteria |
 |----|-------------------------------------------------------|--------------------------------------------------------------------------------------------|----------------|---------------|-------------------|----------|
-| 1  | First meeting with client                             | To understand client problem and requirements                                              | Planning       | 10 minutes    | 10.2.2023           | A        |
-| 2  | Write down success criteria                           | To list down the first success criteria                                                    | Planning       | 20 minutes    | 12.2.2023           | A        |
-| 3  | Write problem definition                              | Have problem definition which will identify who client is and the product that client want | Planning       | 20 minutes        | 12.2.2023           | A        |
-| 4 | Research and write rationale for proposed solution    | Finish rationale for proposed solution                                                     | Planning       | 2 hours       | 12.2.2023          | A        |
-| 5  | Update success criteria                               | List more success criteria and prepare for presentation to client                          | Planning       | 15 minutes    | 13.2.2023         | A        |
-| 6  | Starts working on login and registration system       | Finish login and registration system with database                                         | Development    | 2 hours        | 14.2.2023         | C        |
-| 7 | Working on password encryption                        | Using sha256 to encrypt password and check password in login and registration              | Development    |15 minutes| 14.2.2023          | C        |
-| 8| Meet with client to  present the success criteria     | Present success criteria to client to get the approval                                     | Planning       | 30 minutes    | 21.2.2023         | A        |
-| 9  | Create wireframe diagram                              | Wireframe diagram is ready to present to client as the first MVP                           | Design         | 40 minutes   | 22.2.2023          | B        |
-| 10  | Create system diagram                                 | System diagram is done with details written on it                                          | Design         |  45 minutes       | 22.2.2023         | B        |
-| 11 | Create welcome screen following the wireframe diagram | Have welcome screen ready                                                                  | Development    | 2 hours       | 22/23.2.2023           | C        |
-| 12 | Present the wireframe and application to the client   | Get client's feedback on the wireframe and application                                     | Planning       | 10 minutes    |???          | A        |
-| 13 | Make ER diagram                                       | ER diagram is created for both tables                                                      | Planning       | 30 minutes    | ???      | B        |
+| 1  | First meeting with client                             | To understand client problem and requirements                                              | 10 minutes    | 10.2.2023           | A        |
+| 2  | Write down success criteria                           | To list down the first success criteria                                                    | 20 minutes    | 12.2.2023           | A        |
+| 3  | Write problem definition                              | Have problem definition which will identify who client is and the product that client want | 20 minutes        | 12.2.2023           | A        |
+| 4 | Research and write rationale for proposed solution    | Finish rationale for proposed solution                                                     |  2 hours       | 12.2.2023          | A        |
+| 5  | Update success criteria                               | List more success criteria and prepare for presentation to client                          | 15 minutes    | 13.2.2023         | A        |
+| 6  | Starts working on login and registration system       | Finish login and registration system with database                                           | 2 hours        | 14.2.2023         | C        |
+| 7 | Working on password encryption                        | Using sha256 to encrypt password and check password in login and registration              | 15 minutes| 14.2.2023          | C        |
+| 8| Meet with client to  present the success criteria     | Present success criteria to client to get the approval                                     |  30 minutes    | 21.2.2023         | A        |
+| 9  | Create wireframe diagram                              | Wireframe diagram is ready to present to client as the first MVP                             | 40 minutes   | 22.2.2023          | B        |
+| 10  | Create system diagram                                 | System diagram is done with details written on it                                           |  45 minutes       | 22.2.2023         | B        |
+| 11 | Create welcome screen following the wireframe diagram | Have welcome screen ready                                                                    | 2 hours       | 22/23.2.2023           | C        |
+| 12 | Present the wireframe and application to the client   | Get client's feedback on the wireframe and application                                         | 10 minutes    |???          | A        |
+| 13 | Make ER diagram                                       | ER diagram is created for both tables                                                          | 30 minutes    | ???      | B        |
 
 Table 2:
 > Record of Task-:shows the planning and working process throughout the project. This includes: programming, documentation, client's meetings, and other  process from the start of the project to the due date. Table contains order, description, Planned Outcome, Design Cycle, Time Estimate, Target Completion, Criteria
