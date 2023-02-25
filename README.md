@@ -40,7 +40,9 @@ When compared to another UI creating software such as Flutter, KivyMD has more a
 # Criterion B: Solution Overview 
 ### Diagrams
 System diagram, wireframe for the GUI, flow diagram, ER diagram for the database, and UML diagram for the OOP classes.
-
+### Wireframe Diagram
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/WireFrame%20diagram%20project%203.png)
+Fig.2 shows wireframe diagram of the journalism club aplication
 ### Test Plan
 
 |Test Number| Test Type  | Target|Procedure|Expected Outcome|
@@ -63,7 +65,7 @@ Table 1:
 | 9  | Create wireframe diagram                              | Wireframe diagram is ready to present to client as the first MVP                             | 40 minutes   | 24.2.2023          | B        |
 | 10  | Create system diagram                                 | System diagram is done with details written on it                                           |  45 minutes       | 24.2.2023         | B        |
 | 11 | Create welcome screen following the wireframe diagram | Have welcome screen ready                                                                    | 1 hour 30 minutes      | 24.2.2023           | C        |
-|12| Create flow diagrams for parts of the code|Have finished 3 flow diagrams| 45 minutes| 23.2.2023|B|
+|12| Create flow diagrams for parts of the code|Have finished 3 flow diagrams| 45 minutes| 24.2.2023|B|
 |13| Add email validation and editor mode validation| Allow only email with @ sign and give editor access to users with @isakinsider.jp email ending|35 minutes| 24.2.2023|C|
 | 14 | Present the wireframe and application to the client   | Get client's feedback on the wireframe and application| 10 minutes    |???          | A        |
 | 15 | Make ER diagram                                       | ER diagram is created for both tables                                                          | 30 minutes    | ???      | B        |
