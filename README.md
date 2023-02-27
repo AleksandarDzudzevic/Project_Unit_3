@@ -41,7 +41,7 @@ When compared to another UI creating software such as Flutter, KivyMD has more a
 ### Diagrams
 System diagram, wireframe for the GUI, flow diagram, ER diagram for the database, and UML diagram for the OOP classes.
 ### System Diagram
-![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/System%20Diagram%20Project%203.png)
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/System%20Diagram.png)
 Fig.1 shows the system diagram of the jounalism club application
 ### Wireframe Diagram
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/WireFrame%20diagram%20project%203.png)
