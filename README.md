@@ -15,8 +15,7 @@ Why is the product being developed
  3. Application will have a feature to add an article and safely store it.
  4. Option to add a picture inside of the article, allowing full expirience of digital newspapers.
  5. Option to view past articles containing the author, title, date, picture and its content.
- 6. Option to choose the edition of newspapers the user wants to view, with articles grouped by the dates.
- 7. Option to sign out and delete an account 
+ 6. Option to choose the edition of newspapers the user wants to view, with articles sorted by the date published.
 
 
 
