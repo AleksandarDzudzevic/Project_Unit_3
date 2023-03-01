@@ -55,11 +55,18 @@ Fig.2.2 shows second wireframe diagram of the journalism club aplication
 Fig.3 shows the ER diagram of the journalism club application
 ### Test Plan
 
-|Test Number| Test Type  | Target|Procedure|Expected Outcome|
-|-----------|-----------|--------|-----------|------------------|
-                                                                                                                                                                                                                                                                                                                                                                                                                         
+|Test Number|Description| Test Type  | Target|Procedure|Expected Outcome|
+|-----------|-----------|--------|-----------|------------------|---|
+|1|Account registration system|Unit testing|Have a fully functional registration system that checks if the proper values are inputed in the email and password fields|(1) Run Project_3.py (2) Click the register button on the login screen (3) Input data on all the fields (4) Check if email without @ sign can be created or if password and repeat password fields can differ (5) afte filling up all the fields create an account (6) Try to login with the new account too see if it exists now| After following the procedure, a user should be able to login using the credentials of the new account created|
+|2||--------|-----------|------------------|----|
+|-----------|-----------|--------|-----------|------------------|---|
+|-----------|-----------|--------|-----------|------------------|---|
+|-----------|-----------|--------|-----------|------------------|-|
+|6|Python Code Review|Code Review|The changed variable names and added comments will help the user to understand how the code functions|Check the Project_3.py file for any: 1. inadequate Variable names 2. missing comments 3. Repetition	and unefficient programming methods| The code is now easy to follow and allows future developers of it to modify it and use it efficiently .|                                                                                                                                                                                                                                                                                                                                                                                         
+
 Table 1:
 >Shows the test plan containing information about testing done for this application. There are 3 different types of tests presented in the test plan which are unit test(to test one part of the program), integration test(to test the cooperation of different parts) and code review(to check the quality of code). Table shows description, steps to follow, and expected output with a goal to help user understand the process better.
+>
 ### Record of tasks
 
 |    | Planned Action                                        | Planned Outcome                                                                            | Time Estimate | Target Completion | Criteria |
@@ -83,7 +90,7 @@ Table 1:
 |18| Make a UML diagram| Finish with UML diagram and officialy mark all the required diagrams done|15 minutes| 1.3.2023|B|
 |19|Add a feature to delete an article    |Have a functioning feature that alows writer to create its own article    |50 minutes      |1.3.2023  | C  |
 |20| Add a feature to add articles as an editor    | be able to upload new articles, containing their author and title  | 40 minutes |1.3.2023  | C  |
-|19|.    |.      |.      |.  |.    |
+|21| Update test plan   | Add 2 new testings performed (1 Unit and 1 code review)     |10 minutes      |1.3.2023  |B   |
 |19|.    |.      |.      |.  |.    |
 |19|.    |.      |.      |.  |.    |
 |19|.    |.      |.      |.  |.    |
