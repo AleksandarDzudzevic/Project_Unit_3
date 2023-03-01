@@ -15,8 +15,7 @@ Why is the product being developed
  3. Application will have a feature to add an article and safely store it.
  4. Option to add a picture inside of the article, allowing full expirience of digital newspapers.
  5. Option to view past articles containing the author, title, date, picture and its content.
- 6. Option to choose the edition of newspapers the user wants to view, with articles sorted by the date published.
-
+ 6. Option to delete articles created by the user logged in.
 
 
 ### Design statement
@@ -43,8 +42,12 @@ System diagram, wireframe for the GUI, flow diagram, ER diagram for the database
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/System%20Diagram.png)
 Fig.1 shows the system diagram of the jounalism club application
 ### Wireframe Diagram
+First version
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/WireFrame%20diagram%20project%203.png)
-Fig.2 shows wireframe diagram of the journalism club aplication
+Fig.2.1 shows first wireframe diagram of the journalism club aplication
+Second version
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/wireframediagram.jpg)
+Fig.2.2 shows second wireframe diagram of the journalism club aplication
 ### Test Plan
 
 |Test Number| Test Type  | Target|Procedure|Expected Outcome|
