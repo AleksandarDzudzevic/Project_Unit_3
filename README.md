@@ -87,7 +87,7 @@ Table 1:
 | 14 | Present the wireframe and application to the client   | Get client's feedback on the wireframe and application| 10 minutes    |26.2.2023          | A        |
 |16| Create the first version of article viewscreen| have a first vesion of the screen containing all the articles| 1 hour| 27.2.2023
 | 17 | Make ER diagram                                       | ER diagram is created for both tables                                                          | 30 minutes    | 27.2.2023      | B        |
-|18| Make a UML diagram| Finish with UML diagram and officialy mark all the required diagrams done|15 minutes| 1.3.2023|B|
+|18| Make a final Wireframe diagram| Finish with wireframe diagram that is up to clients requests, mentioned in the last meeting|15 minutes| 1.3.2023|B|
 |19|Add a feature to delete an article    |Have a functioning feature that alows writer to create its own article    |50 minutes      |1.3.2023  | C  |
 |20| Add a feature to add articles as an editor    | be able to upload new articles, containing their author and title  | 40 minutes |1.3.2023  | C  |
 |21| Update test plan   | Add 2 new testings performed (1 Unit and 1 code review)     |10 minutes      |1.3.2023  |B   |
