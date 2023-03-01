@@ -45,9 +45,14 @@ Fig.1 shows the system diagram of the jounalism club application
 First version
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/WireFrame%20diagram%20project%203.png)
 Fig.2.1 shows first wireframe diagram of the journalism club aplication
+
 Second version
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/wireframediagram.jpg)
+
 Fig.2.2 shows second wireframe diagram of the journalism club aplication
+### ER Diagram 
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/users.png)
+Fig.3 shows the ER diagram of the journalism club application
 ### Test Plan
 
 |Test Number| Test Type  | Target|Procedure|Expected Outcome|
@@ -75,8 +80,13 @@ Table 1:
 | 14 | Present the wireframe and application to the client   | Get client's feedback on the wireframe and application| 10 minutes    |26.2.2023          | A        |
 |16| Create the first version of article viewscreen| have a first vesion of the screen containing all the articles| 1 hour| 27.2.2023
 | 17 | Make ER diagram                                       | ER diagram is created for both tables                                                          | 30 minutes    | 27.2.2023      | B        |
-|18| Make a UML diagram| Finish with UML diagram and officialy mark all the required diagrams done|15 minutes| 27.2.2023|B|
-
+|18| Make a UML diagram| Finish with UML diagram and officialy mark all the required diagrams done|15 minutes| 1.3.2023|B|
+|19|.    |.      |.      |.  |.   |.  |
+|19|.    |.      |.      |.  |.   |.  |
+|19|.    |.      |.      |.  |.   |.  |
+|19|.    |.      |.      |.  |.   |.  |
+|19|.    |.      |.      |.  |.   |.  |
+|19|.    |.      |.      |.  |.   |.  |
 
 Table 2:
 > Record of Task-:shows the planning and working process throughout the project. This includes: programming, documentation, client's meetings, and other  process from the start of the project to the due date. Table contains order, description, Planned Outcome, Design Cycle, Time Estimate, Target Completion, Criteria
