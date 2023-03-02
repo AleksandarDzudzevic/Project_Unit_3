@@ -44,12 +44,12 @@ Fig.1 shows the system diagram of the jounalism club application
 ### Wireframe Diagram
 First version
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/WireFrame%20diagram%20project%203.png)
-Fig.2.1 shows first wireframe diagram of the journalism club aplication
+Fig.2.1 shows first wireframe diagram of the journalism club application
 
 Second version
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/wireframediagram.jpg)
 
-Fig.2.2 shows second wireframe diagram of the journalism club aplication
+Fig.2.2 shows second wireframe diagram of the journalism club application
 ### ER Diagram 
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/erdiargam.png)
 Fig.3 shows the ER diagram of the journalism club application
@@ -88,12 +88,17 @@ Table 1:
 |16| Create the first version of article viewscreen| have a first vesion of the screen containing all the articles| 1 hour| 27.2.2023
 | 17 | Make ER diagram                                       | ER diagram is created for both tables                                                          | 30 minutes    | 27.2.2023      | B        |
 |18| Make a final Wireframe diagram| Finish with wireframe diagram that is up to clients requests, mentioned in the last meeting|15 minutes| 1.3.2023|B|
-|19|Add a feature to delete an article    |Have a functioning feature that alows writer to create its own article    |50 minutes      |1.3.2023  | C  |
+|19|Add a feature to delete an article    |Have a functioning feature that alows writer to delete its own article    |50 minutes      |1.3.2023  | C  |
 |20| Add a feature to add articles as an editor    | be able to upload new articles, containing their author and title  | 40 minutes |1.3.2023  | C  |
 |21| Update test plan   | Add 2 new testings performed (1 Unit and 1 code review)     |10 minutes      |1.3.2023  |B   |
-|19|.    |.      |.      |.  |.    |
-|19|.    |.      |.      |.  |.    |
-|19|.    |.      |.      |.  |.    |
+|22|Finalize the integration of the add article and read article    |Be able to upload an artice and read it right away by clicking read article function      |30 min |2.3.2023  |C |
+|23| Go back function from article screen | Have functioning buttons for going back to the main screen, for both editor and reader | 10 min  | 2.3.2023 |  C |
+|24|  |  |   |  |   |
+|24|  |  |   |  |   |
+|24|  |  |   |  |   |
+|24|  |  |   |  |   |
+|24|  |  |   |  |   |
+|24|  |  |   |  |   |
 
 Table 2:
 > Record of Task-:shows the planning and working process throughout the project. This includes: programming, documentation, client's meetings, and other  process from the start of the project to the due date. Table contains order, description, Planned Outcome, Design Cycle, Time Estimate, Target Completion, Criteria
