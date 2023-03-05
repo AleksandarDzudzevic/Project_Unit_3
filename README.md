@@ -13,8 +13,8 @@ Why is the product being developed
  1. The application contains account registration and login feature using username email and adequate password.
  2. Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.Viewers can only read. Editors have a feature of adding articles.
  3. Application will have a feature to add an article and safely store it.
- 4. Option to add a picture inside of the article, allowing full expirience of digital newspapers.
- 5. Option to view past articles containing the author, title, picture and its content.
+ 4. Option to read multiple selected articles,one after another, allowing full expirience of digital newspapers.
+ 5. Option to view past articles containing the author, title, and its content.
  6. Option to delete articles created by the user logged in.
 
 
