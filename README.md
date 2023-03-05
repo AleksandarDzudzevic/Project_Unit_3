@@ -98,8 +98,8 @@ Table 1:
 |24| Add popup alerts for logout and delete options | Have a first version of the popup alert or notification for the features mentioned | 35 min   | 4.3.2023 | C  |
 |25|Improve popup functions | Modify popup functions by improving their appearance  |  15 min | 4.3.2023 | C  |
 |26| Update test plan | Document two new tests performed ((1) integration of uploading an article and reading it afterwards (2) Code review of the new delete and read functions) |  10 min | 4.3.2023  | B  |
-|27| Create a Popupcontiang the articles selected for reading| Have a first version of the reading function and the popup feature for articles selected for reading |  1 hour | 4.3.2023 |  C |
-|28|  |  |   |  |   |
+|27| Create a Popup screen containing the articles selected for reading| Have a first version of the reading function and the popup feature for articles selected for reading |  1 hour | 4.3.2023 |  C |
+|28| Cite sources using MLA9 | Cite all sources used, in mla9 format  | 10min  | 5.3.2023 |  C |
 |29|  |  |   |  |   |
 
 Table 2:
