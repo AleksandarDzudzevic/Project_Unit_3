@@ -108,16 +108,25 @@ Table 2:
 
 # Criterion C: Development
 ### Existing tools
-This refers to the software tools used during the development of the solution, and structures such as for loops, and bash commands
+### Criteria number 1: The application contains account registration and login feature using username email and adequate password.
+### Criteria number 2: Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.Viewers can only read. Editors have a feature of adding articles.
+### Criteria number 3: Application will have a feature to add an article and safely store it.
+### Criteria number 4: Option to read multiple selected articles,one after another, allowing full expirience of digital newspapers.
+### Criteria number 5: Option to view past articles containing the author, title, and its content.
+### Criteria number 6: Option to delete articles created by the user logged in.
+
+
+
+
 ### Sources
 
 Szabo, Gabor. "Python SQLite: Insert, Update and Delete Queries". Perl Maven. August 17, 2021, https://perlmaven.com/python-sqlite-insert-update-delete. Accessed February 21, 2023.
 
+"KivyMD Card." KivyMD, 1.1.1, https://kivymd.readthedocs.io/en/1.1.1/components/card/. Accessed 1 Mar. 2023.
+
 "Python String split() Method." W3Schools, Refsnes Data, https://www.w3schools.com/python/ref_string_split.asp. Accessed 2 Mar. 2023.
 
 "Python String strip() Method." W3Schools, Refsnes Data, https://www.w3schools.com/python/ref_string_strip.asp. Accessed 2 Mar. 2023.
-
-"KivyMD Card." KivyMD, 1.1.1, https://kivymd.readthedocs.io/en/1.1.1/components/card/. Accessed 1 Mar. 2023.
 
 "KivyMD Text Field." KivyMD, 0.104.1, https://kivymd.readthedocs.io/en/0.104.1/components/text-field/index.html. Accessed 4 Mar. 2023.
 
