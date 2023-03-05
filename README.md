@@ -51,14 +51,16 @@ Second version
 
 Fig.2.2 shows second wireframe diagram of the journalism club application
 ### ER Diagram 
-![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/erdiargam.png)
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/finalerdiargam.png)
 Fig.3 shows the ER diagram of the journalism club application
+### UML Diagram
+![]()
 ### Test Plan
 
 |Test Number|Description| Test Type  | Target|Procedure|Expected Outcome|
 |-----------|-----------|--------|-----------|------------------|---|
 |1|Account registration system|Unit testing|Have a fully functional registration system that checks if the proper values are inputed in the email and password fields|(1) Run Project_3.py (2) Click the register button on the login screen (3) Input data on all the fields (4) Check if email without @ sign can be created or if password and repeat password fields can differ (5) afte filling up all the fields create an account (6) Try to login with the new account too see if it exists now| After following the procedure, a user should be able to login using the credentials of the new account created|
-|2||--------|-----------|------------------|----|
+|2|Reading articles|Unit Testing|Be able to read articles that are checked, after clicking the read article button|(1) after entering the read article feature, select desired articles by checking the box next to them (2) Click read article button in the bottom right corner (3) See if article content pops up (4) If you selected multiple by clicking outside of the popup screen, you will see the next selecte article and its content |Will have a woking read article feature which allows users to read selected articles|
 |3|Article adding/viewing|Integration testing|Have a functional system of adding an article, and viewing it|(1) Login using editor account (2) Go to add article option and add article by filling in all neccesarry fields (3) Go to read articles feature and see if the newly add article is visible in the article table | New article should be visible at the bottom of the article table|
 |-----------|-----------|--------|-----------|------------------|---|
 |5|delete and read article features code review |Code Review|Make the code behind read and delete functions understandable to possible future developers|(1) Check the code section which contains objects delete and read for any confusing variable names (2) Add comments next any non trivial coding procedures (3) Make any repetitive procedures into a loop| Code looks a lot more understandable now. Comments were added next to the more difficult parts of the code|
@@ -96,7 +98,7 @@ Table 1:
 |24| Add popup alerts for logout and delete options | Have a first version of the popup alert or notification for the features mentioned | 35 min   | 4.3.2023 | C  |
 |25|Improve popup functions | Modify popup functions by improving their appearance  |  15 min | 4.3.2023 | C  |
 |26| Update test plan | Document two new tests performed ((1) integration of uploading an article and reading it afterwards (2) Code review of the new delete and read functions) |  10 min | 4.3.2023  | B  |
-|27|  |  |   |  |   |
+|27| Create a Popupcontiang the articles selected for reading| Have a first version of the reading function and the popup feature for articles selected for reading |  1 hour | 4.3.2023 |  C |
 |28|  |  |   |  |   |
 |29|  |  |   |  |   |
 
