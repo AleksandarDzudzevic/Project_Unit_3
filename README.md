@@ -14,7 +14,7 @@ Why is the product being developed
  2. Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.Viewers can only read. Editors have a feature of adding articles.
  3. Application will have a feature to add an article and safely store it.
  4. Option to add a picture inside of the article, allowing full expirience of digital newspapers.
- 5. Option to view past articles containing the author, title, date, picture and its content.
+ 5. Option to view past articles containing the author, title, picture and its content.
  6. Option to delete articles created by the user logged in.
 
 
@@ -130,6 +130,7 @@ The last 30s of the video should include a discussion of how the code is well or
 #### CLIENT MEETING 1
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Project_3_appendex.png)
 #### CLIENT MEETING 2
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/clientmeetingfinal.jpg)
 
 ### Citations
 [^1]:"Python." Wikipedia, Wikimedia Foundation, 12 Feb. 2023, https://en.wikipedia.org/wiki/Python. ↩
