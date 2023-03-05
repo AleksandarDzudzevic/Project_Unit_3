@@ -110,7 +110,21 @@ Table 2:
 ### Existing tools
 This refers to the software tools used during the development of the solution, and structures such as for loops, and bash commands
 ### Sources
-When code was researched in the web, proper citation is used to give credit to the original author.
+
+Szabo, Gabor. "Python SQLite: Insert, Update and Delete Queries". Perl Maven. August 17, 2021, https://perlmaven.com/python-sqlite-insert-update-delete. Accessed February 21, 2023.
+
+"Python String split() Method." W3Schools, Refsnes Data, https://www.w3schools.com/python/ref_string_split.asp. Accessed 2 Mar. 2023.
+
+"Python String strip() Method." W3Schools, Refsnes Data, https://www.w3schools.com/python/ref_string_strip.asp. Accessed 2 Mar. 2023.
+
+"KivyMD Card." KivyMD, 1.1.1, https://kivymd.readthedocs.io/en/1.1.1/components/card/. Accessed 1 Mar. 2023.
+
+"KivyMD Text Field." KivyMD, 0.104.1, https://kivymd.readthedocs.io/en/0.104.1/components/text-field/index.html. Accessed 4 Mar. 2023.
+
+Sandeep, S. "KivyMD Dialogs." The Python Code, 2021, https://www.thepythoncode.com/article/kivymd-dialogs-python. Accessed 4 Mar. 2023.
+
+"KivyMD Dialog." KivyMD, 1.1.1, https://kivymd.readthedocs.io/en/1.1.1/components/dialog/index.html. Accessed 5 Mar. 2023.
+
 ### Tools used:
 1. OOP paradigm
 2. KivyMD Library
