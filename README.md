@@ -51,7 +51,7 @@ Second version
 
 Fig.2.2 shows second wireframe diagram of the journalism club application
 ### ER Diagram 
-![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/finalerdiargam.png)
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/finalerdiargam%20(1).png)
 Fig.3 shows the ER diagram of the journalism club application
 ### UML Diagram
 ![]()
