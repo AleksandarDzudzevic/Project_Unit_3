@@ -61,8 +61,8 @@ Fig.3 shows the ER diagram of the journalism club application
 |2||--------|-----------|------------------|----|
 |3|Article adding/viewing|Integration testing|Have a functional system of adding an article, and viewing it|(1) Login using editor account (2) Go to add article option and add article by filling in all neccesarry fields (3) Go to read articles feature and see if the newly add article is visible in the article table | New article should be visible at the bottom of the article table|
 |-----------|-----------|--------|-----------|------------------|---|
-|-----------|-----------|--------|-----------|------------------|-|
-|6|Python Code Review|Code Review|The changed variable names and added comments will help the user to understand how the code functions|Check the Project_3.py file for any: 1. inadequate Variable names 2. missing comments 3. Repetition	and unefficient programming methods| The code is now easy to follow and allows future developers of it to modify it and use it efficiently .|                                                                                                                                                                                                                                                                                                                                                                                         
+|5|delete and read article features code review |Code Review|Make the code behind read and delete functions understandable to possible future developers|(1) Check the code section which contains objects delete and read for any confusing variable names (2) Add comments next any non trivial coding procedures (3) Make any repetitive procedures into a loop| Code looks a lot more understandable now. Comments were added next to the more difficult parts of the code|
+|6|Full Python Code Review|Code Review|The changed variable names and added comments will help the user to understand how the code functions|Check the Project_3.py file for any: 1. inadequate Variable names 2. missing comments 3. Repetition	and unefficient programming methods| The code is now easy to follow and allows future developers of it to modify it and use it efficiently .|                                                                                                                                                                                                                                                                                                                                                                                         
 
 Table 1:
 >Shows the test plan containing information about testing done for this application. There are 3 different types of tests presented in the test plan which are unit test(to test one part of the program), integration test(to test the cooperation of different parts) and code review(to check the quality of code). Table shows description, steps to follow, and expected output with a goal to help user understand the process better.
@@ -74,7 +74,7 @@ Table 1:
 | 1  | First meeting with client                             | To understand client problem and requirements                                              | 10 minutes    | 10.2.2023           | A        |
 | 2  | Write down success criteria                           | To list down the first success criteria                                                    | 20 minutes    | 12.2.2023           | A        |
 | 3  | Write problem definition                              | Have problem definition which will identify who client is and the product that client want | 20 minutes        | 12.2.2023           | A        |
-| 4 | Research and write rationale for proposed solution    | Finish rationale for proposed solution                                                     |  2 hours       | 12.2.2023          | A        |
+| 4 | Research and write rationale for proposed solution    | Finish rationale for proposed solution                                                     |  1 hour 10 minutes       | 12.2.2023          | A        |
 | 5  | Update success criteria                               | List more success criteria and prepare for presentation to client                          | 15 minutes    | 13.2.2023         | A        |
 | 6  | Starts working on login and registration system       | Finish login and registration system with database                                           | 2 hours        | 14.2.2023         | C        |
 | 7 | Working on password encryption                        | Using sha256 to encrypt password and check password in login and registration              | 15 minutes| 14.2.2023          | C        |
@@ -93,9 +93,9 @@ Table 1:
 |21| Update test plan   | Add 2 new testings performed (1 Unit and 1 code review)     |10 minutes      |1.3.2023  |B   |
 |22|Finalize the integration of the add article and read article    |Be able to upload an artice and read it right away by clicking read article function      |30 min |2.3.2023  |C |
 |23| Go back function from article screen | Have functioning buttons for going back to the main screen, for both editor and reader | 10 min  | 2.3.2023 |  C |
-|24| Add popup alerts for logout and delete options | Have a popup alert or notification for the features mentioned | 35 min   | 4.3.2023 | C  |
-|25|  |  |   |  |   |
-|26|  |  |   |  |   |
+|24| Add popup alerts for logout and delete options | Have a first version of the popup alert or notification for the features mentioned | 35 min   | 4.3.2023 | C  |
+|25|Improve popup functions | Modify popup functions by improving their appearance  |  15 min | 4.3.2023 | C  |
+|26| Update test plan | Document two new tests performed ((1) integration of uploading an article and reading it afterwards (2) Code review of the new delete and read functions) |  10 min | 4.3.2023  | B  |
 |27|  |  |   |  |   |
 |28|  |  |   |  |   |
 |29|  |  |   |  |   |
