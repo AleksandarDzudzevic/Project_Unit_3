@@ -13,9 +13,11 @@ Why is the product being developed
  1. The application contains account registration and login feature using username email and adequate password.
  2. Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.Viewers can only read. Editors have a feature of adding articles.
  3. Application will have a feature to add an article and safely store it.
- 4. Option to read multiple selected articles,one after another, allowing full expirience of digital newspapers.
+ 4. Option to see image of the article, allowing full expirience of digital newspapers.
  5. Option to view past articles containing the author, title, and its content.
- 6. Option to delete articles created by the user logged in.
+ 6. Option to select multiple articles and read them one after another, just like in digital newspapers.
+ 7. Option to delete articles created by the user logged in.
+ 
 
 
 ### Design statement
@@ -51,7 +53,7 @@ Second version
 
 Fig.2.2 shows second wireframe diagram of the journalism club application
 ### ER Diagram 
-![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/finalerdiargam%20(1).png)
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/finalerdiargam(3).png)
 Fig.3 shows the ER diagram of the journalism club application
 ### UML Diagram
 ![]()
@@ -100,7 +102,15 @@ Table 1:
 |26| Update test plan | Document two new tests performed ((1) integration of uploading an article and reading it afterwards (2) Code review of the new delete and read functions) |  10 min | 4.3.2023  | B  |
 |27| Create a Popup screen containing the articles selected for reading| Have a first version of the reading function and the popup feature for articles selected for reading |  1 hour | 4.3.2023 |  C |
 |28| Cite sources using MLA9 | Cite all sources used, in mla9 format  | 10min  | 5.3.2023 |  C |
-|29|  |  |   |  |   |
+|29| Add the image feature to articles | Have a function that shows the image of the article that has been selected | 1 hour 45 minutes | 6.3.2023  |  C |
+|30| | | | | |
+|30| | | | | |
+|30| | | | | |
+|30| | | | | |
+|30| | | | | |
+|30| | | | | |
+|30| | | | | |
+|30| | | | | |
 
 Table 2:
 > Record of Task-:shows the planning and working process throughout the project. This includes: programming, documentation, client's meetings, and other  process from the start of the project to the due date. Table contains order, description, Planned Outcome, Design Cycle, Time Estimate, Target Completion, Criteria
