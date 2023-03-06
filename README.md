@@ -6,8 +6,6 @@
 UWC ISAK Japan is a school that always strives to be more environmentally friendly, but due to high demand for copies of ISAK INSIDER articles every week, a lot of paper is being used to print them. This especially bothered Jonathan Wang Ye, who is considered by many, number one environmentalist at ISAK, probably even Japan. He is in urgent need for an UWC ISAK journalism club application which would store articles that ISAK INSIDER publishes every week in addition to storing articles from past weeks. He also demands the highest level of security due to the fact that this would be an official school app, so all the passwords must be encrypted, protecting data of app's users. Other than being more green, additional benefit of this app would be that it would nake articles available anywhere in the world, allowing fans and alumni of the school outside ISAK to enjoy it.
 This way everyone would be able to enjoy ISAK INSIDER without hurting the environment by wasting paper in the process.
 
-Who is the client?
-Why is the product being developed
 
 ### Success criteria
  1. The application contains account registration and login feature using username email and adequate password.
@@ -39,19 +37,20 @@ When compared to another UI creating software such as Flutter, KivyMD has more a
 
 # Criterion B: Solution Overview 
 ### Diagrams
-System diagram, wireframe for the GUI, flow diagram, ER diagram for the database, and UML diagram for the OOP classes.
+flow diagram, and UML diagram for the OOP classes.
 ### System Diagram
-![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/System%20Diagram.png)
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/System%20Diagram%20Final.png)
 Fig.1 shows the system diagram of the jounalism club application
 ### Wireframe Diagram
 First version
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/WireFrame%20diagram%20project%203.png)
 Fig.2.1 shows first wireframe diagram of the journalism club application
 
-Second version
+Final version
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/wireframediagram.jpg)
 
 Fig.2.2 shows second wireframe diagram of the journalism club application
+### FLow diagrams
 ### ER Diagram 
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/finalerdiargam(3).png)
 Fig.3 shows the ER diagram of the journalism club application
@@ -59,10 +58,10 @@ Fig.3 shows the ER diagram of the journalism club application
 ![]()
 ### Test Plan
 
-|Test Number|Description| Test Type  | Target|Procedure|Expected Outcome|
-|-----------|-----------|--------|-----------|------------------|---|
-|1|Account registration system|Unit testing|Have a fully functional registration system that checks if the proper values are inputed in the email and password fields|(1) Run Project_3.py (2) Click the register button on the login screen (3) Input data on all the fields (4) After filling in all the fields create an account (6) Try to login with the new account too see if it exists now| After following the procedure, a user should be able to login using the credentials of the new account created|
-|2|Reading articles|Unit Testing|Be able to read articles that are checked, after clicking the read article button|(1) after entering the read article feature, select desired articles by checking the box next to them (2) Click read article button in the bottom right corner (3) See if article content pops up (4) If you selected multiple by clicking outside of the popup screen, you will see the next selecte article and its content |Will have a woking read article feature which allows users to read selected articles|
+|Test Number|Description|Test Type| Target|Procedure|Expected Outcome|
+|-----------|-----------|--------|-----------|-----------------|----|
+|1|Account registration system|Unit testing|Have a fully functional registration system that checks if the proper values are inputed in the email and password fields|(1) Run Project_3.py (2) Click the register button on the login screen (3) Input data on all the fields (4) After filling in all the fields create an account (5) Try to login with the new account too see if it exists now| After following the procedure, a user should be able to login using the credentials of the new account created|
+|2|Reading articles|Unit Testing|Be able to read articles that are checked, after clicking the read article button|(1) after entering the read article feature, select desired articles by checking the box next to them (2) Click read article button in the bottom right corner (3.2)If you selected multiple by clicking outside of the popup screen, you will see the next selecte article and its content |Will have a working read article feature which allows users to read selected articles|
 |3|Article adding/viewing|Integration testing|Have a functional system of adding an article, and viewing it|(1) Login using editor account (2) Go to add article option and add article by filling in all neccesarry fields (3) Go to read articles feature and see if the newly add article is visible in the article table | New article should be visible at the bottom of the article table|
 |-----------|-----------|--------|-----------|------------------|---|
 |5|delete and read article features code review |Code Review|Make the code behind read and delete functions understandable to possible future developers|(1) Check the code section which contains objects delete and read for any confusing variable names (2) Add comments next any non trivial coding procedures (3) Make any repetitive procedures into a loop| Code looks a lot more understandable now. Comments were added next to the more difficult parts of the code|
@@ -143,14 +142,14 @@ Sandeep, S. "KivyMD Dialogs." The Python Code, 2021, https://www.thepythoncode.c
 
 "KivyMD Dialog." KivyMD, 1.1.1, https://kivymd.readthedocs.io/en/1.1.1/components/dialog/index.html. Accessed 5 Mar. 2023.
 
-### Tools used:
-1. OOP paradigm
-2. KivyMD Library
-3. Relational databases
-4. SQLite, ORM
-5. Hashing
-6. csv.file data storing and reading
-
+### Techniques used:
+1. Object Oriented Programming (OOP)( Classes, Inheritance)
+2. Manipulating SQLite Database
+3. Variables
+4. For loops
+5. If statements
+6. Functions
+7. Password Hashing
 # Criterion D: Functionality 
 ### Format
 A video demonstrating the testing for the success criteria.
