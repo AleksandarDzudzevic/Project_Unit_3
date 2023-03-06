@@ -121,11 +121,10 @@ Table 2:
 ### Criteria number 1: The application contains account registration and login feature using username email and adequate password.
 ### Criteria number 2: Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.Viewers can only read. Editors have a feature of adding articles.
 ### Criteria number 3: Application will have a feature to add an article and safely store it.
-### Criteria number 4: Option to read multiple selected articles,one after another, allowing full expirience of digital newspapers.
+### Criteria number 4: Option to see image of the article, allowing full expirience of digital newspapers.
 ### Criteria number 5: Option to view past articles containing the author, title, and its content.
-### Criteria number 6: Option to delete articles created by the user logged in.
-
-
+### Criteria number 6: Option to select multiple articles and read them one after another, just like in digital newspapers.
+### Criteria number 7: Option to delete articles created by the user logged in.
 
 
 ### Sources
