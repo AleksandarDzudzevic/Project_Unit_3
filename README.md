@@ -102,9 +102,9 @@ Table 1:
 |27| Create a Popup screen containing the articles selected for reading| Have a first version of the reading function and the popup feature for articles selected for reading |  1 hour | 4.3.2023 |  C |
 |28| Cite sources using MLA9 | Cite all sources used, in mla9 format  | 10min  | 5.3.2023 |  C |
 |29| Add the image feature to articles | Have a function that shows the image of the article that has been selected | 1 hour 45 minutes | 6.3.2023  |  C |
-|30|Make a UML diagram | Have a finsihed UML diagram, an accurate representation of all classes and object in the python code| | 1 hour | 7.3.2023|B |
+|30|Make a UML diagram | Have a finsihed UML diagram, an accurate representation of all classes and object in the python code | 1 hour | 7.3.2023|B |
 |31|Update test plan | Add last two tests (1 unit and one integration test)|15min| 7.3.2023| C| 
-|30| | | | | |
+|32| Add techniques used| Have techniques used mentioned in Criteria C| 5 min| 7.3.2023| C|
 |30| | | | | |
 |30| | | | | |
 |30| | | | | |
