@@ -40,7 +40,9 @@ When compared to another UI creating software such as Flutter, KivyMD has more a
 flow diagram
 ### System Diagram
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/System%20Diagram%20Final.png)
-Fig.1 shows the system diagram of the jounalism club application
+Fig.1 shows the system diagram of the jounalism club application.
+
+The application will run on Python and KivyMD. The application will ask for various inputs from the users. They will all be stored within a database using SQLite. All of this will be executed within the Pycharm application, which will then display the output on a screen.
 ### Wireframe Diagram
 First version
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/WireFrame%20diagram%20project%203.png)
