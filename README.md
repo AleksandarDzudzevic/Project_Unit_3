@@ -56,8 +56,9 @@ Fig.3 shows the ER diagram of the journalism club application
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/UML_Diagram_project3%20-%20UML%20Class%20(1).png.crdownload)
 Fig. 4 shows UML diagram of the journalism club applicaton. This diagram presents all classes used in this project. There are 2 main parent classes: MDScreen and MDApp. All subclasses inherit methods and attributes from these parent classes, as indicated by the arrows in the diagram.
 The database_worker class establishes connection to a SQLite3 database, searches for specific data needed, gets it, and closes the connection afterwards.
-
-
+### Flow diagrams
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Flow_diagram_registration_project3%20-%20Flowchart.png)
+Fig. 5 shows the flow diagram of the method used for registration of a new account.
 ### Test Plan
 
 |Test Number|Description|Test Type| Target|Procedure|Expected Outcome|
