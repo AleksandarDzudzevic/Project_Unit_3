@@ -37,7 +37,7 @@ When compared to another UI creating software such as Flutter, KivyMD has more a
 
 # Criterion B: Solution Overview 
 ### Diagrams
-flow diagram, and UML diagram for the OOP classes.
+flow diagram
 ### System Diagram
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/System%20Diagram%20Final.png)
 Fig.1 shows the system diagram of the jounalism club application
