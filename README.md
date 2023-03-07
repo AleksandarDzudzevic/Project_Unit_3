@@ -59,6 +59,8 @@ The database_worker class establishes connection to a SQLite3 database, searches
 ### Flow diagrams
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Flow_diagram_registration_project3%20-%20Flowchart.png)
 Fig. 5 shows the flow diagram of the method used for registration of a new account. It validates data entered for name, email, password and repeat password text fields, and if all credential requirements are met, the accoutn is successfully created and added into account database.
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Flow%20chart%202%20project%203.png)
+Fig. 6 shows the flow diagram of the method read which used to view selected newspapers articles. It displays articles in the order of selection using popup screens.
 ### Test Plan
 
 |Test Number|Description|Test Type| Target|Procedure|Expected Outcome|
