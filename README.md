@@ -58,7 +58,7 @@ Fig. 4 shows UML diagram of the journalism club applicaton. This diagram present
 The database_worker class establishes connection to a SQLite3 database, searches for specific data needed, gets it, and closes the connection afterwards.
 ### Flow diagrams
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Flow_diagram_registration_project3%20-%20Flowchart.png)
-Fig. 5 shows the flow diagram of the method used for registration of a new account.
+Fig. 5 shows the flow diagram of the method used for registration of a new account. It validates data entered for name, email, password and repeat password text fields, and if all credential requirements are met, the accoutn is successfully created and added into account database.
 ### Test Plan
 
 |Test Number|Description|Test Type| Target|Procedure|Expected Outcome|
