@@ -115,9 +115,9 @@ Table 1:
 |30|Make a UML diagram | Have a finsihed UML diagram, an accurate representation of all classes and object in the python code | 1 hour | 7.3.2023|B |
 |31|Update test plan | Add last two tests (1 unit and one integration test)|15min| 7.3.2023| C| 
 |32| Add techniques used| Have techniques used mentioned in Criteria C| 5 min| 7.3.2023| C|
-|30| | | | | |
-|30| | | | | |
-|30| | | | | |
+|33| Create First Flow diagram| Create a flow diagram for the try_register method which validates inputed data, and creates an account if all the criteria is met| 30 minutes| 7.3.2023| B|
+|34| Create Second Flow diagram| Create a flow diagram for the read method which allows users to read desired articles by selecting them in the artilce table and choosing read article function| 30 minutes| 7.3.2023| B|
+|35| Create Third Flow diagram | Create a flow diagram for the update method which updates article table, not displaying any deleted articles| 25 minutes | 7.3.2023| B|
 |30| | | | | |
 |30| | | | | |
 
