@@ -128,7 +128,213 @@ Table 2:
 # Criterion C: Development
 ### Existing tools
 ### Criteria number 1: The application contains account registration and login feature using username email and adequate password.
+
+#### LoginScreen Python code
+```.py
+class LoginScreen(MDScreen):
+    current_user = None
+    editor = False
+
+    def try_login(self):
+        print("User tries to login")
+        uname = self.ids.uname.text
+        passwd = self.ids.passwd.text
+        query = f"SELECT * from users WHERE username= '{uname}' or email='{uname}' "
+        db = database_worker("accounts.db")
+        result = db.search(query = query)
+        db.close()
+        if len(result) == 1:
+            print(result)
+            id, email, hashed, uname = result[0]
+            editor_validation = False
+            editor_check = "@isakinsider.jp"
+            if editor_check in email:
+                editor_validation = True
+            if check_password(user_password = passwd, hashed_password = hashed) and editor_validation == True:
+                print("Login as an editor was successful")
+                self.ids.passwd.text = ""
+                EditorHomeScreen.user_name = uname
+                self.parent.current = "EditorHomeScreen"
+                LoginScreen.current_user = result[0]
+                LoginScreen.editor = True
+            else:
+                if check_password(user_password = passwd, hashed_password = hashed):
+                    print("Login as a reader was successful")
+                    self.ids.passwd.text = ""
+                    HomeScreen.user_name = uname
+                    self.parent.current = "HomeScreen"
+
+        else:
+            print("login incorrect")
+
+    def go_register(self):
+        print("screen to register screen")
+        self.parent.current = "SignupScreen"
+
+```
+#### SignupScreen Python code
+```.py
+class SignupScreen(MDScreen):
+
+    def try_register(self):
+        uname = self.ids.uname.text
+        email = self.ids.email.text
+        passwd1 = self.ids.passwd.text
+        passwd2 = self.ids.passwd_confirm.text
+        if "@" not in email:
+            self.ids.email.error = True
+
+        if passwd1 != passwd2 or len(passwd1) < 6:
+            self.ids.passwd.error = True
+            self.ids.passwd_confirm.error = True
+
+        if "@" in email and passwd1 == passwd2 and len(passwd1) >= 6:
+            hash = encrypt_password(passwd1)
+            db = database_worker("accounts.db")
+            query = f"INSERT into users(email,password,username) values('{email}','{hash}','{uname}')"
+            db.run_save(query)
+            db.close()
+            print("Registration completed")
+            self.parent.current = "LoginScreen"
+
+    def cancel(self):
+        self.parent.current = "LoginScreen"
+        self.ids.passwd.text = ""
+        self.ids.passwd_confirm.text = ""
+```
+#### LoginScreen KivyMD code
+```.kv
+<LoginScreen>:
+    size:500,500
+    FitImage:
+        source:"newspapers.png"
+    MDCard:
+        size_hint:0.6,.9
+        elevation:2
+        orientation:"vertical"
+        pos_hint:{"center_x":.5,"center_y":0.5}
+        padding:dp(50)
+        MDBoxLayout:
+            MDLabel:
+                size_hint:0.15,1
+            FitImage:
+                source:"Untitled design.png"
+                size_hint:.53,1
+            MDLabel:
+                size_hint:0.15,1
+        MDTextField:
+            id:uname
+            hint_text:"Enter your username or email"
+            icon_left:"email"
+
+        MDTextField:
+            id:passwd
+            hint_text:"Enter your password"
+            icon_left:"key"
+            password:True
+
+        MDBoxLayout:
+            size_hint:1,.1
+            MDRaisedButton:
+                id:login
+                text:"Login"
+                on_press: root.try_login()
+                size_hint:.3,1
+                md_bg_color:"#161223"
+            MDLabel:
+                size_hint:.3,1
+            MDRaisedButton:
+                id:signup
+                text:"Register"
+                on_press: root.go_register()
+                size_hint:.3,1
+                md_bg_color:"#11dd99"
+   ```
+#### SignupScreen KivyMD code
+```.kv                
+<SignupScreen>:
+    size:500,500
+    FitImage:
+        source:"newspapers.png"
+    MDCard:
+        size_hint:0.8,.9
+        elevation:2
+        orientation:"vertical"
+        pos_hint:{"center_x":.5,"center_y":0.5}
+        padding:dp(50)
+
+        FitImage:
+            source:"Re.png"
+
+        MDTextField:
+            id:uname
+            hint_text:"Enter your username"
+            icon_left:"account"
+
+        MDTextField:
+            id:email
+            hint_text:"Enter your email"
+            icon_left:"email"
+            helper_text_mode:"on_error"
+            helper_text:"Email is not valid"
+
+        MDTextField:
+            id:passwd
+            hint_text:"Enter your password"
+            icon_left:"key"
+            password:True
+
+        MDTextField:
+            id:passwd_confirm
+            hint_text:"Enter your password (min. 6 characters, containing number and a letter)"
+            icon_left:"key"
+            password:True
+            helper_text_mode:"on_error"
+            helper_text:"Password does not match or fails password policy"
+        MDLabel:
+            size_hint:1,.05
+        MDBoxLayout:
+            size_hint:1,.2
+
+            MDRaisedButton:
+                id:signup
+                text:"Submit"
+                on_press: root.try_register()
+                size_hint:.3,1
+                md_bg_color:"#161223"
+
+            MDLabel:
+                size_hint:.3,1
+
+            MDRaisedButton:
+                id:cancel
+                text:"cancel"
+                on_press: root.cancel()
+                size_hint:.3,1
+                md_bg_color:"#11dd99"
+```
 ### Criteria number 2: Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.Viewers can only read. Editors have a feature of adding articles.
+
+#### Python code used to differenciate editors and normal readers.
+```.py
+ editor_validation = False
+            editor_check = "@isakinsider.jp"
+            if editor_check in email:
+                editor_validation = True
+            if check_password(user_password = passwd, hashed_password = hashed) and editor_validation == True:
+                print("Login as an editor was successful")
+                self.ids.passwd.text = ""
+                EditorHomeScreen.user_name = uname
+                self.parent.current = "EditorHomeScreen"
+                LoginScreen.current_user = result[0]
+                LoginScreen.editor = True
+            else:
+                if check_password(user_password = passwd, hashed_password = hashed):
+                    print("Login as a reader was successful")
+                    self.ids.passwd.text = ""
+                    HomeScreen.user_name = uname
+                    self.parent.current = "HomeScreen"
+```
 ### Criteria number 3: Application will have a feature to add an article and safely store it.
 ### Criteria number 4: Option to see image of the article, allowing full expirience of digital newspapers.
 ### Criteria number 5: Option to view past articles containing the author, title, and its content.
