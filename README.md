@@ -56,6 +56,10 @@ Fig.2.2 shows second wireframe diagram of the journalism club application
 Fig.3 shows the ER diagram of the journalism club application
 ### UML Diagram
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/UML_Diagram_project3%20-%20UML%20Class.png)
+Fig. 4 shows UML diagram of the journalism club applicaton. This diagram presents all classes used in this project. There are 2 main parent classes: MDScreen and MDApp. All subclasses inherit methods and attributes from these parent classes, as indicated by the arrows in the diagram.
+The database_worker class establishes connection to a SQLite3 database, searches for specific data needed, gets it, and closes the connection afterwards.
+
+
 ### Test Plan
 
 |Test Number|Description|Test Type| Target|Procedure|Expected Outcome|
