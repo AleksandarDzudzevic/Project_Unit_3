@@ -44,14 +44,10 @@ Fig.1 shows the system diagram of the jounalism club application.
 
 The application will run on Python and KivyMD. The application will ask for various inputs from the users. They will all be stored within a database using SQLite. All of this will be executed within the Pycharm application, which will then display the output on a screen.
 ### Wireframe Diagram
-First version
-![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/WireFrame%20diagram%20project%203.png)
-Fig.2.1 shows first wireframe diagram of the journalism club application
-
 Final version
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/wireframediagram.jpg)
 
-Fig.2.2 shows second wireframe diagram of the journalism club application
+Fig.2 shows final wireframe diagram of the journalism club application
 ### FLow diagrams
 ### ER Diagram 
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/finalerdiargam(3).png)
