@@ -48,19 +48,24 @@ Final version
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/wireframediagram.jpg)
 
 Fig.2 shows final wireframe diagram of the journalism club application
-### FLow diagrams
 ### ER Diagram 
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/finalerdiargam(3).png)
 Fig.3 shows the ER diagram of the journalism club application
+
 ### UML Diagram
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/UML_Diagram_project3%20-%20UML%20Class%20(1).png.crdownload)
 Fig. 4 shows UML diagram of the journalism club applicaton. This diagram presents all classes used in this project. There are 2 main parent classes: MDScreen and MDApp. All subclasses inherit methods and attributes from these parent classes, as indicated by the arrows in the diagram.
 The database_worker class establishes connection to a SQLite3 database, searches for specific data needed, gets it, and closes the connection afterwards.
+
 ### Flow diagrams
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Flow_diagram_registration_project3%20-%20Flowchart.png)
 Fig. 5 shows the flow diagram of the method used for registration of a new account. It validates data entered for name, email, password and repeat password text fields, and if all credential requirements are met, the accoutn is successfully created and added into account database.
+
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Flow%20chart%202%20project%203.png)
 Fig. 6 shows the flow diagram of the method read which used to view selected newspapers articles. It displays articles in the order of selection using popup screens.
+
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Flow%20diagram_update_project3.png)
+Fig. 7 shows the flow diagram of the update method. This method serves to update the article table displayed in the read articles feature. This is so that when an article is deleted, it stops being displayed in the article table. This method is called everytime article/es is/are deleted so that the article table is reliable showing only relevent articles.
 ### Test Plan
 
 |Test Number|Description|Test Type| Target|Procedure|Expected Outcome|
