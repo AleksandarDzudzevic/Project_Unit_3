@@ -28,16 +28,15 @@ For the development of this project, I will use Python programming language, Kiv
 
 Considering the client's requests, I will design and develop this easy-to-use centralized application for managing UWC ISAK's journalism club articles. It will be developed using Python programming language, KivyMD library for the user interface, and SQL for the databases used in the application.
 #### Why Python?
-**Python** Python versatility allows a great cross platform development[^1] which is a neccesity for the application I will be developing. Python has a large and active community of users and developers. This means that there is a wealth of resources available to help you learn the language and build your application, as well as a large pool of talented developers who can contribute to your project.[^2] Python has a simple, intuitive syntax that makes it easy for new users to learn and for experienced developers to quickly pick up. This makes it a good choice for building applications quickly and with fewer bugs, as well as for prototyping new ideas.[^3]
+**Python** Python versatility allows a great cross platform development[^1] which is a neccesity for the application I will be developing. Python has a large and active community of users and developers. [^2] Python has a simple, intuitive syntax that makes it easy for new developers to adapt to code and efficiently continue develpment[^3]. 
 #### Why KivyMD?
-One of the main advantages of using **KivyMD** is that it allows developers to build applications that can run on multiple platforms, including Android, iOS, and Windows. This makes it an ideal choice when targeting wide & international audiance like ISAK's journalism club application would.It is also very suitable for co-developing due to small number of variables used allowing easy interpretation and allowing easy extensibility of the application. This can help to save time and effort, allowing developers to focus on creating their app's functionality and features. KivyMD offers a wide range of customization options that allow developers to tailor their apps to meet the specific needs of their users.[^4]
+One of the main advantages of using **KivyMD** is that it allows developers to build applications that can run on multiple platforms, including Android, iOS, and Windows. This makes it an ideal choice when targeting wide & international audiance like ISAK's journalism club application would.It is also very suitable for co-developing due to small number of variables used allowing easy interpretation and allowing easy extensibility of the application. This can help to save time and effort, allowing developers to focus on creating their app's functionality and features[^4].
 When compared to another UI creating software such as Flutter, KivyMD has more advantage on some components like more supportive online community, user-friendliness but most importantly KivyMD is better as it can work with python coding language while Flutter cannot which therefore is more suitable in this project.[^5]
 #### Why SQL?
-**SQL** is designed to handle large amounts of data efficiently. This makes it an ideal choice for applications that needs to scale as they grow such as this one, as SQL databases can be easily expanded to meet the needs of the application. SQL databases allow for the storage of structured data, which can be easily queried and manipulated. This makes it easier to find the information you need, and to perform complex data analysis tasks. SQL databases are highly reliable, and offer features such as transaction management and data integrity to ensure that the data stored in the database remains accurate and up-to-date.[^6]
+**SQL** is designed to handle large amounts of data efficiently. This makes it an ideal choice for applications that needs to scale as they grow such as this one, as SQL databases can be easily expanded to meet the needs of the application. SQL databases allow for the storage of structured data, which can be easily queried and manipulated. This makes it easier to find the information you need, and to perform complex data analysis tasks. SQL databases are highly reliable ensuring the data stored in the database remains accurate and up-to-date.[^6]
 
 # Criterion B: Solution Overview 
 ### Diagrams
-flow diagram
 ### System Diagram
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/System%20Diagram%20Final.png)
 Fig.1 shows the system diagram of the jounalism club application.
@@ -118,8 +117,8 @@ Table 1:
 |33| Create First Flow diagram| Create a flow diagram for the try_register method which validates inputed data, and creates an account if all the criteria is met| 30 minutes| 7.3.2023| B|
 |34| Create Second Flow diagram| Create a flow diagram for the read method which allows users to read desired articles by selecting them in the artilce table and choosing read article function| 30 minutes| 7.3.2023| B|
 |35| Create Third Flow diagram | Create a flow diagram for the update method which updates article table, not displaying any deleted articles| 25 minutes | 7.3.2023| B|
-|30| | | | | |
-|30| | | | | |
+|36|Add the code parts that show the development proccess that answers success criteria | Add adequate code snippets to criteria C develpment under all success criteria | 30 minutes| 8.3.2023|C |
+|37| | | | | |
 
 Table 2:
 > Record of Task-:shows the planning and working process throughout the project. This includes: programming, documentation, client's meetings, and other  process from the start of the project to the due date. Table contains order, description, Planned Outcome, Design Cycle, Time Estimate, Target Completion, Criteria
