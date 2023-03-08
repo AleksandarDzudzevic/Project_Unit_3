@@ -63,7 +63,7 @@ Fig. 5 shows the flow diagram of the method used for registration of a new accou
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Flow%20chart%202%20project%203.png)
 Fig. 6 shows the flow diagram of the method read which used to view selected newspapers articles. It displays articles in the order of selection using popup screens.
 
-![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Flow%20diagram_update_project3.png)
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Blank%20diagram.png)
 Fig. 7 shows the flow diagram of the update method. This method serves to update the article table displayed in the read articles feature. This is so that when an article is deleted, it stops being displayed in the article table. This method is called everytime article/es is/are deleted so that the article table is reliable showing only relevent articles.
 ### Test Plan
 
