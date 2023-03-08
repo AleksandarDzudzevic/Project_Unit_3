@@ -335,11 +335,102 @@ class SignupScreen(MDScreen):
                     self.parent.current = "HomeScreen"
 ```
 ### Criteria number 3: Application will have a feature to add an article and safely store it.
+#### Python code for the method that adds an article and stores it
+```.py
+    def add_article(self):
+        author = self.ids.author.text
+        title = self.ids.title.text
+        content = self.ids.content.text
+        image = self.ids.image.text
+        if title and content:
+            db = database_worker("accounts.db")
+            query = f"INSERT into articles(author,title,content,image) values('{author}','{title}','{content}','{image}')"
+            db.run_save(query)
+            db.close()
+            self.ids.title.text = ''
+            self.ids.content.text = ''
+            self.parent.current = "EditorHomeScreen"
+```
 ### Criteria number 4: Option to see image of the article, allowing full expirience of digital newspapers.
-### Criteria number 5: Option to view past articles containing the author, title, and its content.
-### Criteria number 6: Option to select multiple articles and read them one after another, just like in digital newspapers.
-### Criteria number 7: Option to delete articles created by the user logged in.
+```.py
+ def photo(self):
+        ArticleImageScreen.url = f"{self.image_link}"
+        print(self.image_link)
+        print(ArticleImageScreen.url)
+        self.parent.current = "ArticleImageScreen"
 
+
+class ArticleImageScreen(MDScreen):
+    url = None
+
+    def on_pre_enter(self, *args):
+        print(self.url)
+        if self.url:
+            self.ids.article_image.source = self.url
+```
+### Criteria number 5: Option to view past articles containing the author, title, and its content.
+```.py
+ self.dialog = MDDialog(
+                text = f"Author: [size=22sp][color=333333]{author}[/color][/size]  \n \n \n "
+                       f"[size=40sp][color=555555]{title}[/color][/size]\n \n \n"
+                       f"[size=15sp][color=666666]{content}[/color][/size]",
+                content_cls = MDBoxLayout(padding = dp(20)),
+                size_hint = (0.8, None),
+                height = dp(500)
+            )
+            self.dialog.open()
+```
+### Criteria number 6: Option to select multiple articles and read them one after another, just like in digital newspapers.
+```.py
+ for r in rows_checked:
+            id = int(r[0])
+            query1 = f"Select author,title,content,image from articles where id={id}"
+            result = db.search(query1)
+            author, title, content, image_link = result[0]
+            self.image_link = image_link
+
+
+            # Create the dialog content
+            self.dialog = MDDialog(
+                text = f"Author: [size=22sp][color=333333]{author}[/color][/size]  \n \n \n "
+                       f"[size=40sp][color=555555]{title}[/color][/size]\n \n \n"
+                       f"[size=15sp][color=666666]{content}[/color][/size]",
+                content_cls = MDBoxLayout(padding = dp(20)),
+                size_hint = (0.8, None),
+                height = dp(500)
+            )
+            self.dialog.open()
+```
+### Criteria number 7: Option to delete articles created by the user logged in.
+```.py
+ def delete(self):
+        rows_checked = self.data_table.get_row_checks()
+        print("riw;", rows_checked)
+        db = database_worker("accounts.db")
+        for r in rows_checked:
+            id = r[0]
+            author = r[1]
+            # Check if the article was created by the current user
+            if author == LoginScreen.current_user[3]:
+                query = f"DELETE FROM articles WHERE id={id}"
+                db.run_save(query)
+                self.data = None
+                confirm_dialog = MDDialog(
+                    title = "Article deleted!",
+                    text = "The selected articles have been deleted.",
+                    buttons = [
+                        MDFlatButton(
+                            text = "OK",
+                            on_release = lambda *args: confirm_dialog.dismiss()
+                        )
+                    ]
+                )
+                confirm_dialog.open()
+
+                self.parent.current = "EditorHomeScreen"
+        db.close()
+        self.update()
+```
 
 ### Sources
 
