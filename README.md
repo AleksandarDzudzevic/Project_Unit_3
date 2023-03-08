@@ -118,8 +118,8 @@ Table 1:
 |34| Create Second Flow diagram| Create a flow diagram for the read method which allows users to read desired articles by selecting them in the artilce table and choosing read article function| 30 minutes| 7.3.2023| B|
 |35| Create Third Flow diagram | Create a flow diagram for the update method which updates article table, not displaying any deleted articles| 25 minutes | 7.3.2023| B|
 |36|Add the code parts that show the development proccess that answers success criteria | Add adequate code snippets to criteria C develpment under all success criteria | 30 minutes| 8.3.2023|C |
-|37|Add criteria C development proccess with the reasoning for methods and tools used in addition to connecting it to computational thinking. |Hav ethis task done for criteria 1,2,3, and 4 |1 hour |8.3.2023 |C|
-
+|37|Add criteria C development proccess with the reasoning for methods and tools used in addition to connecting it to computational thinking. |Have this task done for criteria 1,2,3, and 4 |1 hour |8.3.2023 |C|
+|38|Add criteria C development proccess with the reasoning for methods and tools used in addition to connecting it to computational thinking. |Have this task done for criteria 5,6,7 | 30 minutes |9.3.2023 |C|
 Table 2:
 > Record of Task-:shows the planning and working process throughout the project. This includes: programming, documentation, client's meetings, and other  process from the start of the project to the due date. Table contains order, description, Planned Outcome, Design Cycle, Time Estimate, Target Completion, Criteria
 
