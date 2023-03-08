@@ -118,7 +118,7 @@ Table 1:
 |34| Create Second Flow diagram| Create a flow diagram for the read method which allows users to read desired articles by selecting them in the artilce table and choosing read article function| 30 minutes| 7.3.2023| B|
 |35| Create Third Flow diagram | Create a flow diagram for the update method which updates article table, not displaying any deleted articles| 25 minutes | 7.3.2023| B|
 |36|Add the code parts that show the development proccess that answers success criteria | Add adequate code snippets to criteria C develpment under all success criteria | 30 minutes| 8.3.2023|C |
-|37| | | | | |
+|37|Add criteria C development proccess with the reasoning for methods and tools used in addition to connecting it to computational thinking. |Hav ethis task done for criteria 1,2,3, and 4 |1 hour |8.3.2023 |C|
 
 Table 2:
 > Record of Task-:shows the planning and working process throughout the project. This includes: programming, documentation, client's meetings, and other  process from the start of the project to the due date. Table contains order, description, Planned Outcome, Design Cycle, Time Estimate, Target Completion, Criteria
@@ -171,7 +171,7 @@ class LoginScreen(MDScreen):
         self.parent.current = "SignupScreen"
 
 ```
-Fig. 9 Shows the python code used for the Login part of the code. 
+Fig. 9 Shows the python code used for the Login part of the code. Here I created an algorithm that uses If statements as a method of checking if credentials are correct and link to any existing accounts. Following one of my client's requests regarding safe access to the application. Without a username and password that match one of the account in the user database, one can not acces and use the application. With this said the first request of criteria 1 stated by my client was fulfiled, and a functional login screen was created.
 #### LoginScreen KivyMD code
 ```.kv
 <LoginScreen>:
@@ -220,7 +220,7 @@ Fig. 9 Shows the python code used for the Login part of the code.
                 size_hint:.3,1
                 md_bg_color:"#11dd99"
    ```
-Fig. 10 Shows the KivyMD code used for the LoginScreen and all the functions in it.
+Fig. 10 Shows the KivyMD code used for the LoginScreen and all the functions in it. Using stylish background, appropriate to a digital newspapers article, comnbined with more stylistic features such as fitting button colors, I made sure that users will feel comfortable using this application and will enjoy the expirience to the fullest.
  
  
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/registerScreen_proof.gif)
@@ -255,7 +255,7 @@ class SignupScreen(MDScreen):
         self.ids.passwd.text = ""
         self.ids.passwd_confirm.text = ""
 ```
-Fig. 12 shows the python code used for the register feature of the application.
+Fig. 12 Shows the python code used for the signup/registration feature of the application. I created an algorithm that uses If statements as a method of checking if data inserted into these text fields follow apropriate validation requirements. Even though I recognized a pattern and at first thought that last if is not needed and an else could be a better solution, I relaized that in order to meet my clients request of assuring that all the data must meet policies set for its type. The reason for the last if statement is to prevent someone incorrectly puting an email, but the correct passwords, but then since the else is tied to the if statement regarding password policy, account with an invalid email would be created, which would go against my clients request. But by using my algorithm this was not the case as the third if statement validates if both email and password policiy requirements were met. with this said by using computational thinking the second request of the success criteria 1 regarding signup feature was successfully met. 
 #### SignupScreen KivyMD code
 ```.kv                
 <SignupScreen>:
@@ -343,7 +343,7 @@ Fig. 14 showcases the difference between account that is registered as an editor
                     HomeScreen.user_name = uname
                     self.parent.current = "HomeScreen"
 ```
-Fig. 15 Shows the code part that checks credentials and if the account created will be an editor account or not. It checks if the "@isakinsider.jp" is in the user's email. If it is, the user will be given author credentials and will have access do editor home screen. If not, account will be a reader, gaining access to reader home screen. All this is showcased in Fig. 14.
+Fig. 15 Shows the code part that checks credentials and if the account created will be an editor account or not. It checks if the "@isakinsider.jp" is in the user's email. If it is, the user will be given author credentials and will have access do editor home screen. If not, account will be a reader, gaining access to reader home screen. In order to solve this problem of differenciating users based on their credentials. I used decomposition and got rid of the unnecesary validations of passwords, until I find the solution to check if user is editor based on their email. I got this idea by recognizing a pattern of validating data based on the content of the string inputed. All this is showcased in Fig. 14. With this said, criteria 2 was successfully answered.
 
 ### Criteria number 3: Application will have a feature to add an article and safely store it.
 
@@ -385,7 +385,7 @@ class ArticleImageScreen(MDScreen):
         if self.url:
             self.ids.article_image.source = self.url
 ```
-Fig. 19 Shows the python method photo that takes the image url of the article which was stored in the article database, and then using that url acceses the image which has the matching url and is inside of the same file as the projects main code
+Fig. 19 Shows the python method photo that takes the image url of the article which was stored in the article database, and then using that url acceses the image which has the matching url and is inside of the same file as the projects main code. I recognized the problem of the picture not being visible enough when presented in the popup format, so I created a method that serves as a bridge between article screen and a screen that will fully show desired picture. This way I answered my client's additional request for the picture to be in the largest format possible, making it very visible, just like it would be in the physical newspapers. Criteria 4 was answered successfully this way, assuring much needed full digital newspapers expirience. 
 ### Criteria number 5: Option to view past articles containing the author, title, and its content.
 ```.py
  self.dialog = MDDialog(
@@ -398,6 +398,8 @@ Fig. 19 Shows the python method photo that takes the image url of the article wh
             )
             self.dialog.open()
 ```
+Fig. 20 Shows a code that creates popup contianing the articles that were selected for reading previously. I had a request to make selected articles both visible and estetic, but also easy to close and move to the next article. So by using computational thinking, more specificly decomposition, I tackled first problem by choosing specific font style and the spacing, similar to ones used in online newspapers. Second problem was solved by using MDDialog as a tool to create popup screens, which allowed quick transition to the article user wants to read next. Finally I combined to decomped smaller solved problems into one final solution, and with that I have succesfully fulfilled client's criteria 5.
+By implementing 
 ### Criteria number 6: Option to select multiple articles and read them one after another, just like in digital newspapers.
 ```.py
  for r in rows_checked:
@@ -419,7 +421,9 @@ Fig. 19 Shows the python method photo that takes the image url of the article wh
             )
             self.dialog.open()
 ```
+Fig.21 Shows the algorithm I created in order to answer the request of my client regarding creation of the way that allows users to read all checked articles one after another, without the need to check in between readings, but by simply clicking outside of the popup to move to the next article. I used pattern recognition to realize that this could be done through a for loop. Implementing computational thinking to this problem not only solved the issue but gave a rather practical method of moving to the next article. With this, by adapting the once normal read function of a single article, I transformed it into practical multi article feature. That feature was what my client asked for and what fulfilled criteria number 6.
 ### Criteria number 7: Option to delete articles created by the user logged in.
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/delete_article_proof.gif)
 ```.py
  def delete(self):
         rows_checked = self.data_table.get_row_checks()
@@ -449,7 +453,7 @@ Fig. 19 Shows the python method photo that takes the image url of the article wh
         db.close()
         self.update()
 ```
-
+Fig.22 shows the method used when choosing to delete articles that were written by the user. The method uses an algorithm. which goes through for iteration until it went through all selected rows. Using an if statement in checks if those articles were writtenn by the editor currently signed in. This was done because in order to avoid any potential conflict between isak insider edtiors, no editor can delete articles written by other editors. This way option to delete any irrelevant or outdated articles is available, which was my client's final success criteria.
 ### Sources
 
 Szabo, Gabor. "Python SQLite: Insert, Update and Delete Queries". Perl Maven. August 17, 2021, https://perlmaven.com/python-sqlite-insert-update-delete. Accessed February 21, 2023.
