@@ -125,9 +125,9 @@ Table 2:
 
 
 # Criterion C: Development
-### Existing tools
 ### Criteria number 1: The application contains account registration and login feature using username email and adequate password.
-
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/login_screen_proof.gif)
+Fig. 8 Shows proof of the criteria 1, by showcasing functional login feature. It consists of two text fields (1) username/email and (2) password. If either the username or email match with the password enetered, user will be signed in to an adequate account containing these credentials.
 #### LoginScreen Python code
 ```.py
 class LoginScreen(MDScreen):
@@ -171,36 +171,7 @@ class LoginScreen(MDScreen):
         self.parent.current = "SignupScreen"
 
 ```
-#### SignupScreen Python code
-```.py
-class SignupScreen(MDScreen):
-
-    def try_register(self):
-        uname = self.ids.uname.text
-        email = self.ids.email.text
-        passwd1 = self.ids.passwd.text
-        passwd2 = self.ids.passwd_confirm.text
-        if "@" not in email:
-            self.ids.email.error = True
-
-        if passwd1 != passwd2 or len(passwd1) < 6:
-            self.ids.passwd.error = True
-            self.ids.passwd_confirm.error = True
-
-        if "@" in email and passwd1 == passwd2 and len(passwd1) >= 6:
-            hash = encrypt_password(passwd1)
-            db = database_worker("accounts.db")
-            query = f"INSERT into users(email,password,username) values('{email}','{hash}','{uname}')"
-            db.run_save(query)
-            db.close()
-            print("Registration completed")
-            self.parent.current = "LoginScreen"
-
-    def cancel(self):
-        self.parent.current = "LoginScreen"
-        self.ids.passwd.text = ""
-        self.ids.passwd_confirm.text = ""
-```
+Fig. 9 Shows the python code used for the Login part of the code. 
 #### LoginScreen KivyMD code
 ```.kv
 <LoginScreen>:
@@ -249,6 +220,42 @@ class SignupScreen(MDScreen):
                 size_hint:.3,1
                 md_bg_color:"#11dd99"
    ```
+Fig. 10 Shows the KivyMD code used for the LoginScreen and all the functions in it.
+ 
+ 
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/registerScreen_proof.gif)
+ Fig.11 Shows proof of the criteria 1, by showcasing functional register feature. The screen consists of four text fields (1) username (2) email (3) password and (4) repeated password. If email does not follow the email validation policy, by missing "@" sign, an error in email textbox will appear. Similarly, if passwords do not match or the length of password does not follow the password policy, error will appear in these textboxes. If all the credentials are entered adequatly, an account will be created and user will be resurected to login screen to sign in to newly created account.
+#### SignupScreen Python code
+```.py
+class SignupScreen(MDScreen):
+
+    def try_register(self):
+        uname = self.ids.uname.text
+        email = self.ids.email.text
+        passwd1 = self.ids.passwd.text
+        passwd2 = self.ids.passwd_confirm.text
+        if "@" not in email:
+            self.ids.email.error = True
+
+        if passwd1 != passwd2 or len(passwd1) < 6:
+            self.ids.passwd.error = True
+            self.ids.passwd_confirm.error = True
+
+        if "@" in email and passwd1 == passwd2 and len(passwd1) >= 6:
+            hash = encrypt_password(passwd1)
+            db = database_worker("accounts.db")
+            query = f"INSERT into users(email,password,username) values('{email}','{hash}','{uname}')"
+            db.run_save(query)
+            db.close()
+            print("Registration completed")
+            self.parent.current = "LoginScreen"
+
+    def cancel(self):
+        self.parent.current = "LoginScreen"
+        self.ids.passwd.text = ""
+        self.ids.passwd_confirm.text = ""
+```
+Fig. 12 shows the python code used for the register feature of the application.
 #### SignupScreen KivyMD code
 ```.kv                
 <SignupScreen>:
@@ -312,8 +319,10 @@ class SignupScreen(MDScreen):
                 size_hint:.3,1
                 md_bg_color:"#11dd99"
 ```
+Fig.13 shows KivyMD code used for the user interface of the SignupScreen. It consists of 4 textboxes mentioned in Fig 11, aswell as sumbition button that creates an account if all the data is correctly entered, showcased and explained in Fig.11 and cancel button that returns user to the login screen.
 ### Criteria number 2: Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.Viewers can only read. Editors have a feature of adding articles.
-
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/editor_reader_proof.gif)
+Fig. 14 showcases the difference between account that is registered as an editor (following the specific email structure that editors have) and an account registered as a normal user.
 #### Python code used to differenciate editors and normal readers.
 ```.py
  editor_validation = False
@@ -334,7 +343,12 @@ class SignupScreen(MDScreen):
                     HomeScreen.user_name = uname
                     self.parent.current = "HomeScreen"
 ```
+Fig. 15 Shows the code part that checks credentials and if the account created will be an editor account or not. It checks if the "@isakinsider.jp" is in the user's email. If it is, the user will be given author credentials and will have access do editor home screen. If not, account will be a reader, gaining access to reader home screen. All this is showcased in Fig. 14.
+
 ### Criteria number 3: Application will have a feature to add an article and safely store it.
+
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/add_article_proof.gif)
+Fig. 16 Shows the proccess of adding an article, and showcases how it was stored and displayed in article table.
 #### Python code for the method that adds an article and stores it
 ```.py
     def add_article(self):
@@ -351,7 +365,10 @@ class SignupScreen(MDScreen):
             self.ids.content.text = ''
             self.parent.current = "EditorHomeScreen"
 ```
+Fig.17 Shows method used to add articles by gathering data inputed in the author,title, content, image link  in the text fields. It then uses a query that inserts these values into the database containing articles, which will later be accesed to show data in it in the form of an article table.
 ### Criteria number 4: Option to see image of the article, allowing full expirience of digital newspapers.
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Image_view_proof.gif)
+Fig. 18 shows proof of succesful image showcasing, using the image link provided when article was being created.
 ```.py
  def photo(self):
         ArticleImageScreen.url = f"{self.image_link}"
@@ -368,6 +385,7 @@ class ArticleImageScreen(MDScreen):
         if self.url:
             self.ids.article_image.source = self.url
 ```
+Fig. 19 Shows the python method photo that takes the image url of the article which was stored in the article database, and then using that url acceses the image which has the matching url and is inside of the same file as the projects main code
 ### Criteria number 5: Option to view past articles containing the author, title, and its content.
 ```.py
  self.dialog = MDDialog(
