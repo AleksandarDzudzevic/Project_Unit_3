@@ -127,6 +127,7 @@ Table 2:
 # Criterion C: Development
 ### Criteria number 1: The application contains account registration and login feature using username email and adequate password.
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/login_screen_proof.gif)
+
 Fig. 8 Shows proof of the criteria 1, by showcasing functional login feature. It consists of two text fields (1) username/email and (2) password. If either the username or email match with the password enetered, user will be signed in to an adequate account containing these credentials.
 #### LoginScreen Python code
 ```.py
@@ -224,6 +225,7 @@ Fig. 10 Shows the KivyMD code used for the LoginScreen and all the functions in 
  
  
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/registerScreen_proof.gif)
+
  Fig.11 Shows proof of the criteria 1, by showcasing functional register feature. The screen consists of four text fields (1) username (2) email (3) password and (4) repeated password. If email does not follow the email validation policy, by missing "@" sign, an error in email textbox will appear. Similarly, if passwords do not match or the length of password does not follow the password policy, error will appear in these textboxes. If all the credentials are entered adequatly, an account will be created and user will be resurected to login screen to sign in to newly created account.
 #### SignupScreen Python code
 ```.py
@@ -322,6 +324,7 @@ Fig. 12 Shows the python code used for the signup/registration feature of the ap
 Fig.13 shows KivyMD code used for the user interface of the SignupScreen. It consists of 4 textboxes mentioned in Fig 11, aswell as sumbition button that creates an account if all the data is correctly entered, showcased and explained in Fig.11 and cancel button that returns user to the login screen.
 ### Criteria number 2: Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.Viewers can only read. Editors have a feature of adding articles.
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/editor_reader_proof.gif)
+
 Fig. 14 showcases the difference between account that is registered as an editor (following the specific email structure that editors have) and an account registered as a normal user.
 #### Python code used to differenciate editors and normal readers.
 ```.py
@@ -348,6 +351,7 @@ Fig. 15 Shows the code part that checks credentials and if the account created w
 ### Criteria number 3: Application will have a feature to add an article and safely store it.
 
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/add_article_proof.gif)
+
 Fig. 16 Shows the proccess of adding an article, and showcases how it was stored and displayed in article table.
 #### Python code for the method that adds an article and stores it
 ```.py
@@ -368,6 +372,7 @@ Fig. 16 Shows the proccess of adding an article, and showcases how it was stored
 Fig.17 Shows method used to add articles by gathering data inputed in the author,title, content, image link  in the text fields. It then uses a query that inserts these values into the database containing articles, which will later be accesed to show data in it in the form of an article table.
 ### Criteria number 4: Option to see image of the article, allowing full expirience of digital newspapers.
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Image_view_proof.gif)
+
 Fig. 18 shows proof of succesful image showcasing, using the image link provided when article was being created.
 ```.py
  def photo(self):
@@ -424,6 +429,7 @@ By implementing
 Fig.21 Shows the algorithm I created in order to answer the request of my client regarding creation of the way that allows users to read all checked articles one after another, without the need to check in between readings, but by simply clicking outside of the popup to move to the next article. I used pattern recognition to realize that this could be done through a for loop. Implementing computational thinking to this problem not only solved the issue but gave a rather practical method of moving to the next article. With this, by adapting the once normal read function of a single article, I transformed it into practical multi article feature. That feature was what my client asked for and what fulfilled criteria number 6.
 ### Criteria number 7: Option to delete articles created by the user logged in.
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/delete_article_proof.gif)
+
 ```.py
  def delete(self):
         rows_checked = self.data_table.get_row_checks()
