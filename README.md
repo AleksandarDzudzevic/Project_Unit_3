@@ -2,21 +2,39 @@
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/project3.gif)
 
 # Table of Content
-1. [Criteria A](#criteria-a-planning)
+## 1. [Criteria A: Planning](#criteria-a-planning)
+1.1. [Deffinition of the problem](#definition-of-the-problem)
 
-2. [Criteria B](#criteria-b-solution-overview)
+1.2. [Success Criteria](#success-criteria)
 
-3. [Criteria C](#criteria-c-development)
+1.3. [Design Statement](#design-statement)
 
-4. [Criteria D](#criteria-d-functionality)
+1.4. [Rationale for proposed solution](#rationale-for-proposed-solution)
+## 2. [Criteria B: Solution overview](#criteria-b-solution-overview)
+2.1[System Diagram](#system-diagram)
 
-5. [Sources](#sources)
+2.2. [Wireframe Diagram](#wireframe-diagram)
 
-6. [Appendex](#appendex)
+2.3. [ER Diagram](#er-diagram)
 
-7. [Full Python Code](#python-code)
+2.4. [UML Diagram](#uml-diagram)
+
+2.5. [Test plan](#test-plan)
+
+2.6. [Record of tasks](#record-of-tasks)
+
+## 3. [Criteria C: Development](#criteria-c-development)
+
+## 4. [Criteria D: Functionality](#criteria-d-functionality)
+
+## 5. [Miscellaneous](#sources)
+5.1. [Sources](#sources)
+
+5.2. [Appendex](#appendex)
+
+5.3. [Full Python Code](#python-code)
  
-8. [Full KivyMD Code](#kivy-code)
+5.4. [Full KivyMD Code](#kivy-code)
 
 
 # Criteria A-Planning 
