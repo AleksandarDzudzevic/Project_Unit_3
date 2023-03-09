@@ -600,30 +600,30 @@ class LoginScreen(MDScreen):
         print("User tries to login")
         uname = self.ids.uname.text
         passwd = self.ids.passwd.text
-        query = f"SELECT * from users WHERE username= '{uname}' or email='{uname}' "
-        db = database_worker("accounts.db")
-        result = db.search(query = query)
-        db.close()
-        if len(result) == 1:
+        query = f"SELECT * from users WHERE username= '{uname}' or email='{uname}' " # Query to search for user
+        db = database_worker("accounts.db") # Connect to the database
+        result = db.search(query = query) # Search the database for the user
+        db.close() # Close the database connection
+        if len(result) == 1: # If only one user is found
             print(result)
-            id, email, hashed, uname = result[0]
+            id, email, hashed, uname = result[0] # Get the user details
             editor_validation = False
             editor_check = "@isakinsider.jp"
-            if editor_check in email:
+            if editor_check in email: # Check if the user is an editor
                 editor_validation = True
-            if check_password(user_password = passwd, hashed_password = hashed) and editor_validation == True:
+            if check_password(user_password = passwd, hashed_password = hashed) and editor_validation == True: # Check if the password matches and user is an editor
                 print("Login as an editor was successful")
                 self.ids.passwd.text = ""
-                EditorHomeScreen.user_name = uname
-                self.parent.current = "EditorHomeScreen"
-                LoginScreen.current_user = result[0]
-                LoginScreen.editor = True
+                EditorHomeScreen.user_name = uname # Set the current user's name
+                self.parent.current = "EditorHomeScreen" # Move to the editor's home screen
+                LoginScreen.current_user = result[0] # Set the current user's details
+                LoginScreen.editor = True # Set the current user as an editor
             else:
-                if check_password(user_password = passwd, hashed_password = hashed):
+                if check_password(user_password = passwd, hashed_password = hashed): # Check if the password matches
                     print("Login as a reader was successful")
                     self.ids.passwd.text = ""
-                    HomeScreen.user_name = uname
-                    self.parent.current = "HomeScreen"
+                    HomeScreen.user_name = uname # Set the current user's name
+                    self.parent.current = "HomeScreen" # Move to the reader's home screen
 
         else:
             print("login incorrect")
@@ -640,10 +640,10 @@ class SignupScreen(MDScreen):
         email = self.ids.email.text
         passwd1 = self.ids.passwd.text
         passwd2 = self.ids.passwd_confirm.text
-        if "@" not in email:
+        if "@" not in email: # Check if email is valid
             self.ids.email.error = True
 
-        if passwd1 != passwd2 or len(passwd1) < 6:
+        if passwd1 != passwd2 or len(passwd1) < 6: # Check if passwords match and is at least 6 characters long
             self.ids.passwd.error = True
             self.ids.passwd_confirm.error = True
 
