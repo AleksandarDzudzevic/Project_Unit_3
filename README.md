@@ -25,6 +25,12 @@
 
 ## 3. [Criteria C: Development](#criteria-c-development)
 
+3.1 [Proposed solutions to client's criteria](#proposed-solution)
+
+3.2. [Sources](#sources)
+
+3.3.[Tools and techniques used](#techniques-used)
+
 ## 4. [Criteria D: Functionality](#criteria-d-functionality)
  
 4.1 [Application showcase Video](#video)
@@ -32,13 +38,12 @@
 4.2 [Appendix](#appendex)
  
 ## 5. [Miscellaneous](#sources)
-5.1. [Sources](#sources)
 
-5.2. [Appendex](#appendex)
+5.1. [Appendex](#appendex)
 
-5.3. [Full Python Code](#python-code)
+5.2. [Full Python Code](#python-code)
  
-5.4. [Full KivyMD Code](#kivy-code)
+5.3. [Full KivyMD Code](#kivy-code)
 
 
 # Criteria A-Planning 
@@ -165,6 +170,9 @@ Table 2:
 
 
 # Criteria C-Development
+
+## Proposed solution
+
 ### Criteria number 1: The application contains account registration and login feature using username email and adequate password.
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/login_screen_proof.gif)
 
@@ -502,6 +510,7 @@ Fig.21 Shows the algorithm I created in order to answer the request of my client
         self.update()
 ```
 Fig.22 shows the method used when choosing to delete articles that were written by the user. The method uses an algorithm. which goes through for iteration until it went through all selected rows. Using an if statement in checks if those articles were writtenn by the editor currently signed in. This was done because in order to avoid any potential conflict between isak insider edtiors, no editor can delete articles written by other editors. This way option to delete any irrelevant or outdated articles is available, which was my client's final success criteria.
+
 ### Sources
 
 Szabo, Gabor. "Python SQLite: Insert, Update and Delete Queries". Perl Maven. August 17, 2021, https://perlmaven.com/python-sqlite-insert-update-delete. Accessed February 21, 2023.
