@@ -168,7 +168,7 @@ Table 2:
 ### Criteria number 1: The application contains account registration and login feature using username email and adequate password.
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/login_screen_proof.gif)
 
-Fig. 8 Shows proof of the criteria 1, by showcasing functional login feature. It consists of two text fields (1) username/email and (2) password. If either the username or email match with the password enetered, user will be signed in to an adequate account containing these credentials.
+Fig. 8 Shows response to clients criteria 1, by showcasing functional login feature. It consists of two text fields (1) username/email and (2) password. If either the username or email match with the password enetered, user will be signed in to an adequate account containing these credentials.
 #### LoginScreen Python code
 ```.py
 class LoginScreen(MDScreen):
@@ -212,7 +212,7 @@ class LoginScreen(MDScreen):
         self.parent.current = "SignupScreen"
 
 ```
-Fig. 9 Shows the python code used for the Login part of the code. Here I created an algorithm that uses If statements as a method of checking if credentials are correct and link to any existing accounts. Following one of my client's requests regarding safe access to the application. Without a username and password that match one of the account in the user database, one can not acces and use the application. With this said the first request of criteria 1 stated by my client was fulfiled, and a functional login screen was created.
+Fig. 9 Shows the python code used for the Login part of the code. Here I created an algorithm that uses If statements as a method of checking if credentials are correct and link to any existing accounts. Following one of my client's requests regarding safe access to the application. Without a username and password that match one of the account in the user database, one can not acces and use the application. In order to make siging in possible with either username or email, I have used computational thinking, more specificly I targeted this problem with an abstract solution which involves query shocased in try_login method which checks if the data enetereed in the username box matches with either email or username of an account, accepting either when checking credentials. With this said the first request of criteria 1 stated by my client was fulfiled, and a functional login screen was created.
 #### LoginScreen KivyMD code
 ```.kv
 <LoginScreen>:
@@ -261,12 +261,12 @@ Fig. 9 Shows the python code used for the Login part of the code. Here I created
                 size_hint:.3,1
                 md_bg_color:"#11dd99"
    ```
-Fig. 10 Shows the KivyMD code used for the LoginScreen and all the functions in it. Using stylish background, appropriate to a digital newspapers article, comnbined with more stylistic features such as fitting button colors, I made sure that users will feel comfortable using this application and will enjoy the expirience to the fullest.
+Fig. 10 Shows the KivyMD code used for the LoginScreen and all the functions in it. Using stylish background, appropriate to a digital newspapers article, comnbined with more stylistic features such as fitting button colors, I made sure that users will feel comfortable using this application and will enjoy the expirience to the fullest. In order to do this I reasearched multiple sources regarding the color choice. [^Best_colors_for_mobile_applications]
  
  
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/registerScreen_proof.gif)
 
- Fig.11 Shows proof of the criteria 1, by showcasing functional register feature. The screen consists of four text fields (1) username (2) email (3) password and (4) repeated password. If email does not follow the email validation policy, by missing "@" sign, an error in email textbox will appear. Similarly, if passwords do not match or the length of password does not follow the password policy, error will appear in these textboxes. If all the credentials are entered adequatly, an account will be created and user will be resurected to login screen to sign in to newly created account.
+ Fig.11 Shows  of the criteria 1, by showcasing functional register feature. The screen consists of four text fields (1) username (2) email (3) password and (4) repeated password. If email does not follow the email validation policy, by missing "@" sign, an error in email textbox will appear. Similarly, if passwords do not match or the length of password does not follow the password policy, error will appear in these textboxes. If all the credentials are entered adequatly, an account will be created and user will be resurected to login screen to sign in to newly created account.
 #### SignupScreen Python code
 ```.py
 class SignupScreen(MDScreen):
@@ -297,7 +297,7 @@ class SignupScreen(MDScreen):
         self.ids.passwd.text = ""
         self.ids.passwd_confirm.text = ""
 ```
-Fig. 12 Shows the python code used for the signup/registration feature of the application. I created an algorithm that uses If statements as a method of checking if data inserted into these text fields follow apropriate validation requirements. Even though I recognized a pattern and at first thought that last if is not needed and an else could be a better solution, I relaized that in order to meet my clients request of assuring that all the data must meet policies set for its type. The reason for the last if statement is to prevent someone incorrectly puting an email, but the correct passwords, but then since the else is tied to the if statement regarding password policy, account with an invalid email would be created, which would go against my clients request. But by using my algorithm this was not the case as the third if statement validates if both email and password policiy requirements were met. with this said by using computational thinking the second request of the success criteria 1 regarding signup feature was successfully met. 
+Fig. 12 Shows the python code used for the signup/registration feature of the application. I created an algorithm that uses If statements as a method of checking if data inserted into these text fields follow apropriate validation requirements. Even though I recognized a pattern and at first thought that last if statement is not needed and an else statement could be a better solution, I relaized that in order to meet my clients request of assuring that all the data must meet policies set for its type. The reason for the last if statement is to prevent someone incorrectly puting an email, but the correct passwords, but then since the else is tied to the if statement regarding password policy, account with an invalid email would be created, which would go against my clients request. But by using my algorithm this was not the case as the third if statement validates if both email and password policiy requirements were met. with this said by using computational thinking the second request of the success criteria 1 regarding signup feature was successfully met. 
 #### SignupScreen KivyMD code
 ```.kv                
 <SignupScreen>:
@@ -363,6 +363,7 @@ Fig. 12 Shows the python code used for the signup/registration feature of the ap
 ```
 Fig.13 shows KivyMD code used for the user interface of the SignupScreen. It consists of 4 textboxes mentioned in Fig 11, aswell as sumbition button that creates an account if all the data is correctly entered, showcased and explained in Fig.11 and cancel button that returns user to the login screen.
 ### Criteria number 2: Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.Viewers can only read. Editors have a feature of adding articles.
+
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/editor_reader_proof.gif)
 
 Fig. 14 showcases the difference between account that is registered as an editor (following the specific email structure that editors have) and an account registered as a normal user.
@@ -413,7 +414,7 @@ Fig.17 Shows method used to add articles by gathering data inputed in the author
 ### Criteria number 4: Option to see image of the article, allowing full expirience of digital newspapers.
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Image_view_proof.gif)
 
-Fig. 18 shows proof of succesful image showcasing, using the image link provided when article was being created.
+Fig. 18 shows response to client's success criteria 4, succesful image showcasing, using the image link provided when article was being created.
 ```.py
  def photo(self):
         ArticleImageScreen.url = f"{self.image_link}"
@@ -467,6 +468,7 @@ By implementing
             self.dialog.open()
 ```
 Fig.21 Shows the algorithm I created in order to answer the request of my client regarding creation of the way that allows users to read all checked articles one after another, without the need to check in between readings, but by simply clicking outside of the popup to move to the next article. I used pattern recognition to realize that this could be done through a for loop. Implementing computational thinking to this problem not only solved the issue but gave a rather practical method of moving to the next article. With this, by adapting the once normal read function of a single article, I transformed it into practical multi article feature. That feature was what my client asked for and what fulfilled criteria number 6.
+
 ### Criteria number 7: Option to delete articles created by the user logged in.
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/delete_article_proof.gif)
 
@@ -548,7 +550,7 @@ The last 30s of the video should include a discussion of how the code is well or
 [^4]:Gupta, Kaustubh. “What Is KivyMD | Creating Android Machine Learning Apps Using KivyMD.” Analytics Vidhya, 30 June 2021, www.analyticsvidhya.com/blog/2021/06/creating-android-ml-app-kivymd/#:~:text=KivyMD%20is%20built%20on%20the. Accessed 13 Feb. 2023.
 [^5]:“Kivy vs Flutter | Learn the Key Differences between Kivy and Flutter.” EDUCBA,  July 2021, www.educba.com/kivy-vs-flutter/.
 [^6]:"SQL." W3Schools, 13 Feb. 2023, https://www.w3schools.com/sql/ ↩
-
+[^Best_colors_for_mobile_applications]:Divami Design Labs. “3 Best Color Used in Developing Mobile Apps.” Divami Design Labs, 29 Nov. 2019, https://www.divami.com/blog/3-best-color-used-in-developing-mobile-apps. Accessed 9 Mar. 2023.
 
 # Python Code
 
