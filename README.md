@@ -37,13 +37,11 @@
 
 4.2 [Appendix](#appendex)
  
-## 5. [Miscellaneous](#sources)
+## 5. [Full Code](#python-code)
 
-5.1. [Appendex](#appendex)
-
-5.2. [Full Python Code](#python-code)
+5.1. [Full Python Code](#python-code)
  
-5.3. [Full KivyMD Code](#kivy-code)
+5.2. [Full KivyMD Code](#kivy-code)
 
 
 # Criteria A-Planning 
