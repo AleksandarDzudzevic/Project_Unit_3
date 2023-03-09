@@ -538,7 +538,9 @@ Sandeep, S. "KivyMD Dialogs." The Python Code, 2021, https://www.thepythoncode.c
 
 ### Video
 The following video showcases applications functionality as well as organization of the code so that it is suitable for future developers.
-![](https://drive.google.com/file/d/1c1mbwxRtYYnA0ZHvz1fzsSHbLzS-a7jq/view?usp=sharing)
+https://drive.google.com/file/d/1c1mbwxRtYYnA0ZHvz1fzsSHbLzS-a7jq/view?usp=sharing
+
+
 ### Appendex
 #### CLIENT MEETING 1
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Project_3_appendex.png)
