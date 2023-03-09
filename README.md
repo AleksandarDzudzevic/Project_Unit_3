@@ -553,5 +553,678 @@ The last 30s of the video should include a discussion of how the code is well or
 [^Best_colors_for_mobile_applications]:Divami Design Labs. “3 Best Color Used in Developing Mobile Apps.” Divami Design Labs, 29 Nov. 2019, https://www.divami.com/blog/3-best-color-used-in-developing-mobile-apps. Accessed 9 Mar. 2023.
 
 # Python Code
+```.py
+import sqlite3
 
+from kivy.app import App
+from kivymd.uix.boxlayout import MDBoxLayout
+from kivymd.uix.screen import MDScreen
+from secure_password import encrypt_password, check_password
+from kivymd.uix.datatables import MDDataTable
+from kivy.lang import Builder
+from kivymd.app import MDApp
+from kivymd.uix.button import MDFlatButton
+from kivymd.uix.dialog import MDDialog
+from kivy.metrics import dp
+
+
+class database_worker:
+    def __init__(self, name):
+        self.connection = sqlite3.connect(name)
+        self.cursor = self.connection.cursor()
+
+    def search(self, query):
+        result = self.cursor.execute(query).fetchall()
+        return result
+
+    def run_save(self, query):
+        self.cursor.execute(query)
+        self.connection.commit()
+
+    def close(self):
+        self.connection.close()
+
+
+class LoginScreen(MDScreen):
+    current_user = None
+    editor = False
+
+    def try_login(self):
+        print("User tries to login")
+        uname = self.ids.uname.text
+        passwd = self.ids.passwd.text
+        query = f"SELECT * from users WHERE username= '{uname}' or email='{uname}' "
+        db = database_worker("accounts.db")
+        result = db.search(query = query)
+        db.close()
+        if len(result) == 1:
+            print(result)
+            id, email, hashed, uname = result[0]
+            editor_validation = False
+            editor_check = "@isakinsider.jp"
+            if editor_check in email:
+                editor_validation = True
+            if check_password(user_password = passwd, hashed_password = hashed) and editor_validation == True:
+                print("Login as an editor was successful")
+                self.ids.passwd.text = ""
+                EditorHomeScreen.user_name = uname
+                self.parent.current = "EditorHomeScreen"
+                LoginScreen.current_user = result[0]
+                LoginScreen.editor = True
+            else:
+                if check_password(user_password = passwd, hashed_password = hashed):
+                    print("Login as a reader was successful")
+                    self.ids.passwd.text = ""
+                    HomeScreen.user_name = uname
+                    self.parent.current = "HomeScreen"
+
+        else:
+            print("login incorrect")
+
+    def go_register(self):
+        print("screen to register screen")
+        self.parent.current = "SignupScreen"
+
+
+class SignupScreen(MDScreen):
+
+    def try_register(self):
+        uname = self.ids.uname.text
+        email = self.ids.email.text
+        passwd1 = self.ids.passwd.text
+        passwd2 = self.ids.passwd_confirm.text
+        if "@" not in email:
+            self.ids.email.error = True
+
+        if passwd1 != passwd2 or len(passwd1) < 6:
+            self.ids.passwd.error = True
+            self.ids.passwd_confirm.error = True
+
+        if "@" in email and passwd1 == passwd2 and len(passwd1) >= 6:
+            hash = encrypt_password(passwd1)
+            db = database_worker("accounts.db")
+            query = f"INSERT into users(email,password,username) values('{email}','{hash}','{uname}')"
+            db.run_save(query)
+            db.close()
+            print("Registration completed")
+            self.parent.current = "LoginScreen"
+
+    def cancel(self):
+        self.parent.current = "LoginScreen"
+        self.ids.passwd.text = ""
+        self.ids.passwd_confirm.text = ""
+
+
+class HomeScreen(MDScreen):
+    user_name = None
+
+    def on_pre_enter(self, *args):
+        self.ids.reader_label.text = f"Welcome {self.user_name.title()}"
+
+    def cancel(self):
+        self.parent.current = "LoginScreen"
+
+    def go_articles(self):
+        self.parent.current = "ArticleScreen"
+
+
+class EditorHomeScreen(MDScreen):
+    user_name = None
+
+    def on_pre_enter(self, *args):
+        self.ids.editor_label.text = f"Welcome {self.user_name.title()}"
+
+    def cancel(self):
+        self.parent.current = "LoginScreen"
+
+    def go_articles(self):
+        self.parent.current = "ArticleScreen"
+
+    def add_article(self):
+        self.parent.current = "AddArticleScreen"
+
+
+class ArticleScreen(MDScreen):
+    data_table = None
+    current_row = None
+    id = None
+    image_link = None
+
+    def __init__(self, **kwargs):
+        super(ArticleScreen, self).__init__(**kwargs)
+
+        # Create the dialog widget
+        self.dialog = MDDialog(
+            size_hint = (0.8, 0.8),
+            text = "",
+            buttons = [
+                MDFlatButton(
+                    text = "Close",
+                    on_press = lambda *args: self.dialog.dismiss()
+                ),
+            ],
+        )
+
+    def read(self):
+        rows_checked = self.data_table.get_row_checks()
+        db = database_worker("accounts.db")
+        for r in rows_checked:
+            id = int(r[0])
+            query1 = f"Select author,title,content,image from articles where id={id}"
+            result = db.search(query1)
+            author, title, content, image_link = result[0]
+            self.image_link = image_link
+
+
+            # Create the dialog content
+            self.dialog = MDDialog(
+                text = f"Author: [size=22sp][color=333333]{author}[/color][/size]  \n \n \n "
+                       f"[size=40sp][color=555555]{title}[/color][/size]\n \n \n"
+                       f"[size=15sp][color=666666]{content}[/color][/size]",
+                content_cls = MDBoxLayout(padding = dp(20)),
+                size_hint = (0.8, None),
+                height = dp(500)
+            )
+            self.dialog.open()
+
+    def on_pre_enter(self, *args):  # Before the screen is shown this code runs
+        self.data_table = MDDataTable(
+            size_hint = (0.7, 0.6),
+            pos_hint = {"center_x": .5, "center_y": .425},
+            use_pagination = True,
+            check = True,
+            column_data = [("No.", 50), ("author", 100), ("title", 100)]
+        )
+        if LoginScreen.editor is False:
+            self.ids.delete.disabled = True
+            self.ids.delete.text = "Only editors can delete articles"
+        # add the table to the screen
+        self.data_table.bind(on_row_press = self.check_pressed)
+        self.add_widget(self.data_table)
+        self.update()
+
+    def update(self):
+        db = database_worker("accounts.db")
+        query = "Select id,author,title From articles"
+        data = db.search(query)
+        self.data = data
+        db.close()
+        self.data_table.update_row_data(None, data)
+
+    def delete(self):
+        rows_checked = self.data_table.get_row_checks()
+        print("riw;", rows_checked)
+        db = database_worker("accounts.db")
+        for r in rows_checked:
+            id = r[0]
+            author = r[1]
+            # Check if the article was created by the current user
+            if author == LoginScreen.current_user[3]:
+                query = f"DELETE FROM articles WHERE id={id}"
+                db.run_save(query)
+                self.data = None
+                confirm_dialog = MDDialog(
+                    title = "Article deleted!",
+                    text = "The selected articles have been deleted.",
+                    buttons = [
+                        MDFlatButton(
+                            text = "OK",
+                            on_release = lambda *args: confirm_dialog.dismiss()
+                        )
+                    ]
+                )
+                confirm_dialog.open()
+
+                self.parent.current = "EditorHomeScreen"
+        db.close()
+        self.update()
+
+    def cancel(self):
+        if LoginScreen.editor == True:
+            self.parent.current = "EditorHomeScreen"
+        else:
+            self.parent.current = "HomeScreen"
+
+    def check_pressed(self, table, current_row):
+        print("row was pressed")
+
+    def photo(self):
+        ArticleImageScreen.url = f"{self.image_link}"
+        print(self.image_link)
+        print(ArticleImageScreen.url)
+        self.parent.current = "ArticleImageScreen"
+
+
+class ArticleImageScreen(MDScreen):
+    url = None
+
+    def on_pre_enter(self, *args):
+        print(self.url)
+        if self.url:
+            self.ids.article_image.source = self.url
+
+    def cancel(self):
+        self.parent.current = "ArticleScreen"
+
+
+class AddArticleScreen(MDScreen):
+
+    def on_pre_enter(self, *args):
+        self.ids.author.text = f"{EditorHomeScreen.user_name}"
+        self.ids.author.disabled = True
+
+    def add_article(self):
+        author = self.ids.author.text
+        title = self.ids.title.text
+        content = self.ids.content.text
+        image = self.ids.image.text
+        if title and content:
+            db = database_worker("accounts.db")
+            query = f"INSERT into articles(author,title,content,image) values('{author}','{title}','{content}','{image}')"
+            db.run_save(query)
+            db.close()
+            self.ids.title.text = ''
+            self.ids.content.text = ''
+            self.parent.current = "EditorHomeScreen"
+
+    def cancel(self):
+        self.parent.current = "EditorHomeScreen"
+
+
+class project3(MDApp):
+    dialog = None
+
+    def build(self):
+        return Builder.load_file('loginapp.kv')
+
+    def show_logout_dialog(self):
+        if not self.dialog:
+            self.dialog = MDDialog(
+                text = "Are you sure you want to log out?",
+                buttons = [
+                    MDFlatButton(
+                        text = "CANCEL",
+                        theme_text_color = "Custom",
+                        text_color = self.theme_cls.primary_color,
+                        on_press = lambda *args: self.dialog.dismiss()
+                    ),
+                    MDFlatButton(
+                        text = "LOG OUT",
+                        theme_text_color = "Custom",
+                        text_color = self.theme_cls.primary_color,
+                        on_press = lambda *args: self.logout()
+
+                    ),
+                ],
+            )
+        self.dialog.open()
+
+    def logout(self):
+        # switch to the login screen (signed out)
+        App.get_running_app().root.current = "LoginScreen"
+        self.dialog.dismiss()
+
+
+test = project3()
+test.run()
+```
 # Kivy Code
+```.kv
+ScreenManager:
+    LoginScreen:
+        name:"LoginScreen"
+    SignupScreen:
+        name:"SignupScreen"
+    HomeScreen:
+        name:"HomeScreen"
+    EditorHomeScreen:
+        name:"EditorHomeScreen"
+    ArticleScreen:
+        name:"ArticleScreen"
+    AddArticleScreen:
+        name:"AddArticleScreen"
+    ArticleImageScreen:
+        name:"ArticleImageScreen"
+<LoginScreen>:
+    size:500,500
+    FitImage:
+        source:"newspapers.png"
+    MDCard:
+        size_hint:0.6,.9
+        elevation:2
+        orientation:"vertical"
+        pos_hint:{"center_x":.5,"center_y":0.5}
+        padding:dp(50)
+        MDBoxLayout:
+            MDLabel:
+                size_hint:0.15,1
+            FitImage:
+                source:"Untitled design.png"
+                size_hint:.53,1
+            MDLabel:
+                size_hint:0.15,1
+        MDTextField:
+            id:uname
+            hint_text:"Enter your username or email"
+            icon_left:"email"
+
+        MDTextField:
+            id:passwd
+            hint_text:"Enter your password"
+            icon_left:"key"
+            password:True
+
+        MDBoxLayout:
+            size_hint:1,.1
+            MDRaisedButton:
+                id:login
+                text:"Login"
+                on_press: root.try_login()
+                size_hint:.3,1
+                md_bg_color:"#161223"
+            MDLabel:
+                size_hint:.3,1
+            MDRaisedButton:
+                id:signup
+                text:"Register"
+                on_press: root.go_register()
+                size_hint:.3,1
+                md_bg_color:"#11dd99"
+<SignupScreen>:
+    size:500,500
+    FitImage:
+        source:"newspapers.png"
+    MDCard:
+        size_hint:0.8,.9
+        elevation:2
+        orientation:"vertical"
+        pos_hint:{"center_x":.5,"center_y":0.5}
+        padding:dp(50)
+
+        FitImage:
+            source:"Re.png"
+
+        MDTextField:
+            id:uname
+            hint_text:"Enter your username"
+            icon_left:"account"
+
+        MDTextField:
+            id:email
+            hint_text:"Enter your email"
+            icon_left:"email"
+            helper_text_mode:"on_error"
+            helper_text:"Email is not valid"
+
+        MDTextField:
+            id:passwd
+            hint_text:"Enter your password"
+            icon_left:"key"
+            password:True
+
+        MDTextField:
+            id:passwd_confirm
+            hint_text:"Enter your password (min. 6 characters, containing number and a letter)"
+            icon_left:"key"
+            password:True
+            helper_text_mode:"on_error"
+            helper_text:"Password does not match or fails password policy"
+        MDLabel:
+            size_hint:1,.05
+        MDBoxLayout:
+            size_hint:1,.2
+
+            MDRaisedButton:
+                id:signup
+                text:"Submit"
+                on_press: root.try_register()
+                size_hint:.3,1
+                md_bg_color:"#161223"
+
+            MDLabel:
+                size_hint:.3,1
+
+            MDRaisedButton:
+                id:cancel
+                text:"cancel"
+                on_press: root.cancel()
+                size_hint:.3,1
+                md_bg_color:"#11dd99"
+<HomeScreen>:
+    size:500,700
+    FitImage:
+        source:"newspapers.png"
+    MDCard:
+        md_bg_color:"#CCFFFF"
+        size_hint:0.8,.9
+        elevation:2
+        orientation:"vertical"
+        pos_hint:{"center_x":.5,"center_y":0.5}
+        padding:dp(50)
+        MDCard:
+            md_bg_color:"white"
+            orientation:"vertical"
+            MDBoxLayout:
+                md_bg_color:"white"
+                orientation:"horizontal"
+                MDLabel:
+                    size_hint:0.15,1
+                    md_bg_color:"white"
+                FitImage:
+                    source:"Untitled design.png"
+                    size_hint:.33,1
+                MDLabel:
+                    size_hint:0.15,1
+                    md_bg_color:"white"
+            MDLabel:
+                id: reader_label
+                size_hint:1,.3
+                text:'Welcome'
+                font_size:70
+                halign:"center"
+                md_bg_color:"white"
+            MDBoxLayout:
+                orientation:"horizontal"
+                MDLabel:
+                    size_hint:.65,1
+                MDBoxLayout:
+                    orientation:"vertical"
+                    pos_hint:{"center_x":.5,"center_y":0.5}
+                    MDLabel:
+                        size_hint:.1,1
+                    MDRaisedButton:
+                        label:"articles"
+                        font_size:35
+                        text:"Read Articles"
+                        size_hint:.6,.7
+                        on_press: root.go_articles()
+
+                    MDLabel:
+                        size_hint:1,.5
+                    MDRaisedButton:
+                        label:"sign-out"
+                        md_bg_color:"#11dd99"
+                        font_size:35
+                        size_hint:.6,.7
+                        text:"Sign out"
+                        on_press: app.show_logout_dialog()
+
+                MDLabel:
+                    size_hint:.3,1
+
+<EditorHomeScreen>:
+    size:500,700
+    FitImage:
+        source:"newspapers.png"
+    MDCard:
+        md_bg_color:"#CCFFFF"
+        size_hint:0.8,.9
+        elevation:2
+        orientation:"vertical"
+        pos_hint:{"center_x":.5,"center_y":0.5}
+        padding:dp(50)
+        MDCard:
+            md_bg_color:"white"
+            orientation:"vertical"
+            MDBoxLayout:
+                md_bg_color:"white"
+                orientation:"horizontal"
+                MDLabel:
+                    size_hint:0.15,1
+                    md_bg_color:"white"
+                FitImage:
+                    source:"Untitled design.png"
+                    size_hint:.33,1
+                MDLabel:
+                    size_hint:0.15,1
+                    md_bg_color:"white"
+            MDLabel:
+                id:editor_label
+                size_hint:1,.3
+                text:'Welcome'
+                font_size:70
+                halign:"center"
+                md_bg_color:"white"
+            MDBoxLayout:
+                orientation:"horizontal"
+                MDLabel:
+                    size_hint:.65,1
+                MDBoxLayout:
+                    orientation:"vertical"
+                    pos_hint:{"center_x":.5,"center_y":0.5}
+                    MDLabel:
+                        size_hint:.1,1
+                    MDRaisedButton:
+                        label:"articles"
+                        font_size:35
+                        text:"Read Articles"
+                        size_hint:.6,.5
+                        on_press: root.go_articles()
+                    MDLabel:
+                        size_hint:1,.5
+                    MDRaisedButton:
+                        font_size:35
+                        md_bg_color:"#DDCDFF"
+                        text:"Add Article"
+                        size_hint:.6,.7
+                        on_press: root.add_article()
+                    MDLabel:
+                        size_hint:1,.5
+                    MDRaisedButton:
+                        label:"sign-out"
+                        md_bg_color:"#11dd99"
+                        font_size:35
+                        size_hint:.6,.7
+                        text:"Sign out"
+                        on_press: app.show_logout_dialog()
+                MDLabel:
+                    size_hint:.3,1
+
+
+<ArticleScreen>:
+    size:500,700
+    FitImage:
+        source:"newspapers.png"
+    MDBoxLayout:
+        orientation:"vertical"
+        MDLabel:
+            size_hint:1,.15
+            text:"ISAK INSIDER"
+            halign:"center"
+            font_size:120
+            md_bg_color:"#DAFFFA"
+
+
+        MDCard:
+            md_bg_color:"#CCFFFF"
+            size_hint:0.8,1
+            elevation:2
+            orientation:"vertical"
+            pos_hint:{"center_x":.5,"center_y":0.5}
+            padding:dp(30)
+            MDBoxLayout:
+                orientation:"horizontal"
+                size_hint:1,.3
+                pos_hint:{"center_x":.5,"center_y":0.1}
+                MDRaisedButton:
+                    id:delete
+                    disabled:False
+                    text:"Remove article"
+                    on_press:root.delete()
+                MDLabel:
+                    size_hint:.2,1
+                MDRaisedButton:
+                    text:"Go back"
+                    on_press:root.cancel()
+                MDLabel:
+                    size_hint:.2,1
+                MDRaisedButton:
+                    text:"Read checked article"
+                    on_release:root.read()
+                MDLabel:
+                    size_hint:.2,1
+                MDRaisedButton:
+                    text:"See article photo"
+                    on_release:root.photo()
+
+<ArticleImageScreen>:
+    size:500,700
+    FitImage:
+        id: article_image
+    MDRaisedButton:
+        size_hint:.1,.1
+        text:"Go BACK"
+        on_press:root.cancel()
+<AddArticleScreen>:
+    MDCard:
+        size_hint:0.8,.9
+        elevation:2
+        orientation:"vertical"
+        pos_hint:{"center_x":.5,"center_y":0.5}
+        padding:dp(50)
+
+        FitImage:
+            source:"add_article.png"
+
+        MDTextField:
+            id:author
+            disabled:False
+            text:""
+            icon_left:"account"
+
+        MDTextField:
+            id:title
+            hint_text:"Title"
+            icon_left:"page"
+
+        MDTextField:
+            id:content
+            hint_text:"Article content"
+            multiline: True
+            icon_left:"newspapers"
+        MDTextField:
+            id:image
+            hint_text:"image link"
+            icon_left:"image"
+        MDLabel:
+            size_hint:1,.05
+        MDBoxLayout:
+            size_hint:1,.3
+            orientation:"horizontal"
+            MDRaisedButton:
+                id:submit_article
+                text:"cancel"
+                on_press: root.cancel()
+                size_hint:.6,1
+                md_bg_color:"#161223"
+
+            MDLabel:
+                size_hint:.2,1
+
+            MDRaisedButton:
+                id:submit_article
+                text:"Submit"
+                on_press: root.add_article()
+                size_hint:.6,1
+                md_bg_color:"#161223"
+```
