@@ -33,7 +33,7 @@
 
 ## 4. [Criteria D: Functionality](#criteria-d-functionality)
  
-4.1 [Application showcase Video](#video)
+4.1 [Application Video](#video)
 
 4.2 [Appendix](#appendex)
  
@@ -163,6 +163,9 @@ Table 1:
 |36|Add the code parts that show the development proccess that answers success criteria | Add adequate code snippets to criteria C develpment under all success criteria | 30 minutes| 8.3.2023|C |
 |37|Add criteria C development proccess with the reasoning for methods and tools used in addition to connecting it to computational thinking. |Have this task done for criteria 1,2,3, and 4 |1 hour |8.3.2023 |C|
 |38|Add criteria C development proccess with the reasoning for methods and tools used in addition to connecting it to computational thinking. |Have this task done for criteria 5,6,7 | 30 minutes |9.3.2023 |C|
+|39| Finalize criteria C development explenation, using computational thinking.| Refine wording used in the text explaination for criteria C development| 30 minutes| 9.3.2023|C|
+|40| Add easy to access links to all project documentation sections| Have one click access at the top of the documentation for easier access to all parts of code sorted based on criteria|35 minutes|9.3.2023|A|
+|41| Create and edit the video showcasing the application| Finish criteria D and the video| 50 minutes| 9.3.2023/10.3.2023|D|
 Table 2:
 > Record of Task-:shows the planning and working process throughout the project. This includes: programming, documentation, client's meetings, and other  process from the start of the project to the due date. Table contains order, description, Planned Outcome, Design Cycle, Time Estimate, Target Completion, Criteria
 
