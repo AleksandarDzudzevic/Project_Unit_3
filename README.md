@@ -26,7 +26,11 @@
 ## 3. [Criteria C: Development](#criteria-c-development)
 
 ## 4. [Criteria D: Functionality](#criteria-d-functionality)
+ 
+4.1 [Application showcase Video](#video)
 
+4.2 [Appendix](#appendex)
+ 
 ## 5. [Miscellaneous](#sources)
 5.1. [Sources](#sources)
 
@@ -523,12 +527,11 @@ Sandeep, S. "KivyMD Dialogs." The Python Code, 2021, https://www.thepythoncode.c
 
 # Criteria D-Functionality
 
-### Format
+### Video
 A video demonstrating the testing for the success criteria.
-
 Max. length 4 min
-### Extensibility
 The last 30s of the video should include a discussion of how the code is well organized so that future developers can extend it
+
 ### Appendex
 #### CLIENT MEETING 1
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/Project_3_appendex.png)
