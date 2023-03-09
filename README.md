@@ -1,7 +1,25 @@
 # Project Unit 3: Journalism club application
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/project3.gif)
 
-# Criterion A: Planning 
+# Table of Content
+1. [Criteria A](#criteria-a-planning)
+
+2. [Criteria B](#criteria-b-solution-overview)
+
+3. [Criteria C](#criteria-c-development)
+
+4. [Criteria D](#criteria-d-functionality)
+
+5. [Sources](#sources)
+
+6. [Appendex](#appendex)
+
+7. [Full Python Code](#python-code)
+ 
+8. [Full KivyMD Code](#kivy-code)
+
+
+# Criteria A-Planning 
 ### Definition of the Problem
 UWC ISAK Japan is a school that always strives to be more environmentally friendly, but due to high demand for copies of ISAK INSIDER articles every week, a lot of paper is being used to print them. This especially bothered Jonathan Wang Ye, who is considered by many, number one environmentalist at ISAK, probably even Japan. He is in urgent need for an UWC ISAK journalism club application which would store articles that ISAK INSIDER publishes every week in addition to storing articles from past weeks. He also demands the highest level of security due to the fact that this would be an official school app, so all the passwords must be encrypted, protecting data of app's users. Other than being more green, additional benefit of this app would be that it would nake articles available anywhere in the world, allowing fans and alumni of the school outside ISAK to enjoy it.
 This way everyone would be able to enjoy ISAK INSIDER without hurting the environment by wasting paper in the process.
@@ -35,7 +53,7 @@ When compared to another UI creating software such as Flutter, KivyMD has more a
 #### Why SQL?
 **SQL** is designed to handle large amounts of data efficiently. This makes it an ideal choice for applications that needs to scale as they grow such as this one, as SQL databases can be easily expanded to meet the needs of the application. SQL databases allow for the storage of structured data, which can be easily queried and manipulated. This makes it easier to find the information you need, and to perform complex data analysis tasks. SQL databases are highly reliable ensuring the data stored in the database remains accurate and up-to-date.[^6]
 
-# Criterion B: Solution Overview 
+# Criteria B-Solution overview
 ### Diagrams
 ### System Diagram
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/System%20Diagram%20Final.png)
@@ -124,7 +142,7 @@ Table 2:
 > Record of Task-:shows the planning and working process throughout the project. This includes: programming, documentation, client's meetings, and other  process from the start of the project to the due date. Table contains order, description, Planned Outcome, Design Cycle, Time Estimate, Target Completion, Criteria
 
 
-# Criterion C: Development
+# Criteria C-Development
 ### Criteria number 1: The application contains account registration and login feature using username email and adequate password.
 ![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/login_screen_proof.gif)
 
@@ -484,7 +502,9 @@ Sandeep, S. "KivyMD Dialogs." The Python Code, 2021, https://www.thepythoncode.c
 5. If statements
 6. Functions
 7. Password Hashing
-# Criterion D: Functionality 
+
+# Criteria D-Functionality
+
 ### Format
 A video demonstrating the testing for the success criteria.
 
@@ -507,3 +527,8 @@ The last 30s of the video should include a discussion of how the code is well or
 [^4]:Gupta, Kaustubh. “What Is KivyMD | Creating Android Machine Learning Apps Using KivyMD.” Analytics Vidhya, 30 June 2021, www.analyticsvidhya.com/blog/2021/06/creating-android-ml-app-kivymd/#:~:text=KivyMD%20is%20built%20on%20the. Accessed 13 Feb. 2023.
 [^5]:“Kivy vs Flutter | Learn the Key Differences between Kivy and Flutter.” EDUCBA,  July 2021, www.educba.com/kivy-vs-flutter/.
 [^6]:"SQL." W3Schools, 13 Feb. 2023, https://www.w3schools.com/sql/ ↩
+
+
+# Python Code
+
+# Kivy Code
