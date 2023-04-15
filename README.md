@@ -19,9 +19,11 @@
 
 2.4. [UML Diagram](#uml-diagram)
 
-2.5. [Test plan](#test-plan)
+2.5. [Flow Diagram](#flow-diagrams)
 
-2.6. [Record of tasks](#record-of-tasks)
+2.6. [Test plan](#test-plan)
+
+2.7. [Record of tasks](#record-of-tasks)
 
 ## 3. [Criteria C: Development](#criteria-c-development)
 
